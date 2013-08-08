@@ -40,7 +40,7 @@ h2 {
 h2 b {font-weight: 700;}
 
 a {color: #3DAAA8; text-decoration: none;}
-a:hover {text-decoration: underline;}
+a:hover {text-decoration: underline; color: #3DAAA8;}
 img {
     border: 0 none;
     max-width: 100%;
@@ -50,7 +50,42 @@ img {
 /* ****************************************************************************************************************
     HEADER
 **************************************************************************************************************** */
+header {}
+header h1.logo {margin-top: 40px;}
+header h1.logo a {display: block;}
 
+header .social_module {
+    padding: 7px 0;
+    border-bottom: 1px solid #efe9e2;
+    padding-left:80px; 
+    float: right;
+    margin-right: 10px;
+}
+header .login_cart_module {
+    float: right;
+    clear: right;
+    margin: 7px 10px 7px 0;
+}
+header .login_cart_module li {float: left;}
+header .login_cart_module li a {padding: 0 7px; color: #806d66;}
+header .login_cart_module li a:hover {color: #3DAAA8;}
+header .login_cart_module .cart {
+    background: url(../media/icn-cart.png) no-repeat 0 0;
+    padding-left:20px;
+    margin-left: 5px;
+}
+header .login_cart_module .cart span {
+    background: url("../media/bg-cart-quantity.png") no-repeat scroll center center transparent;
+    display: block;
+    font-size: 8px;
+    height: 13px;
+    margin-left: -8px;
+    padding: 4px;
+    position: relative;
+    text-align: center;
+    top: -2px;
+    width: 16px;
+}
 
 /* ****************************************************************************************************************
     MEDIA QUERIES
