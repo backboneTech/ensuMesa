@@ -1,0 +1,304 @@
+/* **************************************************************************************************************** 
+    GLOBAL
+**************************************************************************************************************** */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+html {
+    color: #666666;
+    font-size: 13px;
+    font-family: 'roboto';
+}
+h1 {
+    font-family: 'merriweather';
+    font-size:24px;
+    color: #3D312A;
+}
+h2 {
+    font-family: 'roboto';
+    font-size: 18px;
+    color: #3D312A;
+}
+h2 b {font-weight: 700;}
+
+a {color: #3DAAA8; text-decoration: none;}
+a:hover {text-decoration: underline;}
+img {
+    border: 0 none;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* ****************************************************************************************************************
+    HEADER
+**************************************************************************************************************** */
+
+
+/* ****************************************************************************************************************
+    MEDIA QUERIES
+**************************************************************************************************************** */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+/* ****************************************************************************************************************
+    FLEXSLIDER PLUGIN STYLES
+******************************************************************************************************************* */
+
+    /* FlexSlider Necessary Styles
+    *********************************/ 
+    .flexslider {margin: 0; padding: 0;}
+    .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; position: relative;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+    .flexslider .slides img { display: block;}
+    .flex-pauseplay span {text-transform: capitalize;}
+
+    /* Clearfix for the .slides element */
+    .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+    html[xmlns] .slides {display: block;} 
+    * html .slides {height: 1%;}
+
+    /* No JavaScript Fallback */
+    /* If you are not using another script, such as Modernizr, make sure you
+     * include js that eliminates this class on page load */
+    .no-js .slides > li:first-child {display: block;}
+
+
+    /* FlexSlider Default Theme
+    *********************************/
+    .flexslider {
+        margin: 0 0 40px;
+        position: relative; 
+        zoom: 1;
+        color: #FFFFFF;
+    }
+    .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+    .loading .flex-viewport {max-height: 300px;}
+    .flexslider .slides {zoom: 1;}
+
+    .carousel li {margin-right: 5px}
+
+
+    /* Direction Nav */
+    .flex-direction-nav {*height: 0;}
+    .flex-direction-nav a {
+        background: url("../media/slider-controls.png") no-repeat scroll left 0 transparent;
+        cursor: pointer;
+        display: block;
+        height: 73px;
+        margin: -20px 0 0;
+        position: absolute;
+        text-indent: -9999px;
+        top: 50%;
+        width: 30px;
+        z-index: 10; 
+        /*opacity: 0; */
+        /*-webkit-transition: all .3s ease;*/
+    }
+    .flex-direction-nav .flex-next {background-position: right 0; right: 5%; }
+    .flex-direction-nav .flex-prev {left: 5%;}
+    .flexslider .flex-next:hover {background-position: right -69px;}
+    .flexslider .flex-prev:hover {background-position: left -69px;}
+    /*.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;}*/
+    .flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+    .flexslider .flex-prev.flex-disabled:hover {background-position: left 0;}
+    .flexslider .flex-next.flex-disabled:hover {background-position: right 0;}
+
+    /* Control Nav */
+    .flex-control-nav {
+    bottom: 2%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+    .flex-control-nav li {margin: 0 3px; display: inline-block; zoom: 1; *display: inline;}
+    .flex-control-paging li a {
+        width: 15px; 
+        height: 20px;
+        font-size: 16px; 
+        display: block; 
+        background: url("../media/slider-controls.png") no-repeat scroll left bottom transparent;
+        cursor: pointer; 
+        text-indent: -9999px;
+    }
+    .flex-control-paging li a:hover { background-position: -22px bottom; }
+    .flex-control-paging li a.flex-active { background-position: -22px bottom; cursor: default; }
+
+    .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+    .flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+    .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+    .flex-control-thumbs img:hover {opacity: 1;}
+    .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+    .flexslider .loading {
+        background: url("/media/loader.gif") no-repeat scroll center center transparent;
+        min-height: 482px;
+        height: 482px;
+    }
+    
+/* **************************************************************************************************************** 
+    @FONT-FACE
+**************************************************************************************************************** */
+
+@font-face {
+    font-family: 'merriweather';
+    src: url('fonts/merriweather-bold-webfont.eot');
+    src: url('fonts/merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-bold-webfont.woff') format('woff'),
+         url('fonts/merriweather-bold-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-bold-webfont.svg#merriweatherbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'merriweather';
+    src: url('fonts/merriweather-bold-webfont.eot');
+    src: url('fonts/merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-bold-webfont.woff') format('woff'),
+         url('fonts/merriweather-bold-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-bold-webfont.svg#merriweatherbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'merriweather';
+    src: url('fonts/merriweather-light-webfont.eot');
+    src: url('fonts/merriweather-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-light-webfont.woff') format('woff'),
+         url('fonts/merriweather-light-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-light-webfont.svg#merriweatherlight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'merriweather';
+    src: url('fonts/merriweather-regular-webfont.eot');
+    src: url('fonts/merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-regular-webfont.woff') format('woff'),
+         url('fonts/merriweather-regular-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-regular-webfont.svg#merriweatherregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto-bold-webfont.eot');
+    src: url('fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto-bold-webfont.woff') format('woff'),
+         url('fonts/roboto-bold-webfont.ttf') format('truetype'),
+         url('fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto-light-webfont.eot');
+    src: url('fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto-light-webfont.woff') format('woff'),
+         url('fonts/roboto-light-webfont.ttf') format('truetype'),
+         url('fonts/roboto-light-webfont.svg#robotolight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto-medium-webfont.eot');
+    src: url('fonts/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto-medium-webfont.woff') format('woff'),
+         url('fonts/roboto-medium-webfont.ttf') format('truetype'),
+         url('fonts/roboto-medium-webfont.svg#robotomedium') format('svg');
+    font-weight: 600;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto-regular-webfont.eot');
+    src: url('fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto-regular-webfont.woff') format('woff'),
+         url('fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*STYLE GUIDE*/
+#style_guide {padding: 15px;}
+#style_guide .block {padding: 10px 20px; overflow: hidden;}
+#style_guide .column {float: left; width: 33%; margin: 2% 1%;}
+
+#style_guide .headline {
+    background-color: #F5F5F5;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+}
+pre {
+    background-color: #e3e3e3;
+    font-size: 12px;
+    border-radius: 4px 4px 4px 4px;
+    overflow: auto;
+    padding: 2px 10px;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.font_merriweather {
+    font-family: 'merriweather';
+    font-size:20px;
+    margin: 20px;
+}
+.font_merriweather h1 {font-weight: bold;}
+.font_merriweather h2 {font-weight: normal;}
+.font_merriweather h3 {font-weight: 100;}
+
+
+.font_roboto {
+    font-family: 'roboto';
+    font-size:20px;
+    margin: 20px;
+}
+.font_roboto h1 {font-weight: 700;}     /* bold */
+.font_roboto h2 {font-weight: 600;}     /* medium */
+.font_roboto h3 {font-weight: normal;}  /* normal */
+.font_roboto h4 {font-weight: 100;}     /* lighter */
