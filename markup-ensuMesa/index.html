@@ -33,6 +33,17 @@
 
 	<script src="includes/js/jquery.flexslider-min.js"></script>
 
+	<!-- SELECT SKIN -->
+	<script src="includes/js/select-skin/jquery.select_skin.js"></script>
+	<link rel="stylesheet" type="text/css" href="includes/js/select-skin/jquery.select_skin.css">
+	<script>
+		jQuery(document).ready(function() {
+		    jQuery("select").select_skin();
+		});
+	</script>
+
+	<script src="includes/js/functions.js"></script>
+
 	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="media/templates/favicon.ico">
@@ -53,12 +64,66 @@
 			<div class="social_module">
 				<img src="media/fpo-social-header.png">
 			</div>
+
 			<div class="login_cart_module">
 				<ul>
 					<li><a href="">Ingresar</a> /</li>
 					<li><a href="">Registrarse</a> /</li>
-					<li><div class="cart"><span>20</span></div></li>
+					<li>
+						<div class="cart_block">
+							<div class="cart"><span>20</span></div>
+							<div class="cart_summary">
+								<h2>Pedido</h2>
+								<ul>
+									<li>
+										<a class="img_link" href=""><img width="56" src="media/img-thumb-product.png"></a>
+										<div class="info">
+											<h4><a href="">Nombre del producto mas largo</a></h4>
+											<h5>Categoría</h5>
+											<p class="price">$ XXX.XXX.XXX</p>
+											<a class="delete" href="">X</a>
+										</div>
+									</li>
+									<li>
+										<a class="img_link" href=""><img width="56" src="media/img-thumb-product.png"></a>
+										<div class="info">
+											<h4><a href="">Nombre del producto</a></h4>
+											<h5>Categoría</h5>
+											<p class="price">$ XXX.XXX.XXX</p>
+											<a class="delete" href="">X</a>
+										</div>
+									</li>
+								</ul>
+								<div class="botones">
+									<a class="close" href="">Cerrar</a>
+									<a class="btn" href="">Ir a pagar</a>
+								</div>
+							</div>
+						</div>
+					</li>
 				</ul>
+			</div>
+
+			<div class="search_module">
+				<div class="form">
+					<select>
+						<option>Buscar</option>
+						<option>Todo</option>
+						<option>Recetas</option>
+						<option>Expertos</option>
+						<option>Ingredientes</option>
+						<option>Técnicas de cocina</option>
+						<option>Glosario</option>
+						<option>Blog</option>
+						<option>Comunidad</option>
+						<option>Fanáticos del sabor</option>
+						<option>Tienda</option>
+					</select>
+
+					<input type="text">
+					<input type="submit" value="search">
+				</div>
+				<p><a href="">Búsqueda avanzada de recetas</a></p>
 			</div>
 		</div>
 	</header>

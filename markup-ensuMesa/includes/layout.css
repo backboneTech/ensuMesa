@@ -46,7 +46,25 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
+input {
+    border: 1px solid #CCCCCC;
+    font-size: 12px;
+    height: 20px;
+    padding: 3px 5px;
+}
+/* ****************************************************************************************************************
+    estilos con posibles cambios de temas
+**************************************************************************************************************** */
+a.btn {
+    background-color: #3DAAA8;
+    text-align: center;
+    padding: 5px 20px !important;
+    color: #FFFFFF !important;
+    font-size: 12px;
+    font-weight: 100;
+}
+a.btn:hover {background-color:#48CAC8; text-decoration: none;}
+.cart_summary .botones .close {color: #3DAAA8;}
 /* ****************************************************************************************************************
     HEADER
 **************************************************************************************************************** */
@@ -74,19 +92,93 @@ header .login_cart_module .cart {
     padding-left:20px;
     margin-left: 5px;
 }
-header .login_cart_module .cart span {
+
+
+.cart_block {position: relative;}
+.cart_block .cart {cursor: pointer;}
+.cart_block .cart span {
     background: url("../media/bg-cart-quantity.png") no-repeat scroll center center transparent;
     display: block;
-    font-size: 8px;
+    font-size: 10px;
     height: 13px;
-    margin-left: -8px;
+    margin-left: -12px;
     padding: 4px;
     position: relative;
     text-align: center;
-    top: -2px;
-    width: 16px;
+    top: -1px;
+    width: 20px;
 }
+.cart_block .cart_summary {
+    border: 1px solid #cccccc;
+    background-color: #FFFFFF;
+    padding: 4px 8px;
+    position: absolute;
+    top: 27px;
+    right: 0;
+    z-index: 100;
+    display: none;
+}
+.cart_block .cart_summary h2 {
+    font-weight: 100;
+    font-size: 16px;
+    border-bottom: 1px solid #cccccc;
+    padding: 8px 0;
+    margin-bottom: 8px;
+}
+.cart_block .cart_summary ul {overflow: hidden;}
+.cart_block .cart_summary li {margin: 0 0 8px; border-bottom: 1px solid #cccccc; padding: 0 0 8px;}
+.cart_block .cart_summary li a.img_link {display: block; float: left; padding: 0;}
+.cart_block .cart_summary .info {
+    margin-left: 65px;
+    min-height: 77px;
+    padding-right: 20px;
+    position: relative;
+    width: 170px;
+}
+.cart_block .cart_summary .info h4 {
+    color: #3d312a;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 17px;
+}
+.cart_block .cart_summary .info h4 a {padding: 0;}
+.cart_block .cart_summary .info h5 {font-size: 11px; font-weight: 100;}
+.cart_block .cart_summary .info p.price {position: absolute; bottom: 0; left: 0; font-size: 16px; font-weight: 100;}
+.cart_block .cart_summary .info .delete {
+    background: url("../media/btn-delete-product.png") no-repeat scroll center top transparent;
+    display: block;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    text-indent: -9000px;
+    top: 50%;
+    width: 12px;
+}
+.cart_block .cart_summary .info .delete:hover {background-position: center bottom; }
+.cart_summary .botones {overflow: hidden; margin: 3px 0;}
+.cart_summary .botones a.btn {float: right;}
 
+.search_module {
+    clear: right;
+    float: right;
+    background-color: #EFE9E2;
+    width: 400px;
+    padding: 8px 8px 2px;
+}
+.search_module .skin-select-cont {float: left; width: 155px; margin-right: 10px;}
+.search_module .form {overflow: hidden;}
+.search_module input[type="text"] {float: left; width: 197px;}
+.search_module input[type="submit"] {
+    background: url("../media/btn-search.png") no-repeat scroll right center transparent;
+    border: medium none;
+    height: 28px;
+    margin-left: -6px;
+    text-indent: -9000px;
+    width: 31px;
+    float: left;
+    cursor: pointer;
+}
+.search_module p {text-align: center; margin: 2px 0; clear: both;}
 /* ****************************************************************************************************************
     MEDIA QUERIES
 **************************************************************************************************************** */
