@@ -52,18 +52,35 @@ input {
     height: 20px;
     padding: 3px 5px;
 }
+input[placeholder] {color: #999999;}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
 /* ****************************************************************************************************************
     estilos con posibles cambios de temas
 **************************************************************************************************************** */
-a.btn {
+a.btn,
+input.btn {
     background-color: #3DAAA8;
+    border: none;
     text-align: center;
     padding: 5px 20px !important;
     color: #FFFFFF !important;
     font-size: 12px;
     font-weight: 100;
+    cursor: pointer;
 }
-a.btn:hover {background-color:#48CAC8; text-decoration: none;}
+a.btn:hover,
+input.btn:hover {background-color:#48CAC8; text-decoration: none;}
 .cart_summary .botones .close {color: #3DAAA8;}
 /* ****************************************************************************************************************
     HEADER
@@ -179,6 +196,86 @@ header .login_cart_module .cart {
     cursor: pointer;
 }
 .search_module p {text-align: center; margin: 2px 0; clear: both;}
+
+/* ****************************************************************************************************************
+    ADVANCE SEARCH MODULE
+**************************************************************************************************************** */
+#search_advance {
+    border: 2px solid #CCCCCC;
+    width: 960px;
+}
+
+#search_advance input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    background: url("../media/icn-search-bg.png") no-repeat scroll 10px center transparent;
+    font-size: 13px;
+    padding: 13px 10px 13px 37px;
+    width: 95.1%;
+}
+#search_advance h2 {
+    background-color: #F2EDE8;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 8px 37px;
+}
+#search_advance .block {margin: 15px 37px; border-bottom: 1px solid #CCCCCC; padding-bottom: 7px;}
+#search_advance .block.last {border-bottom: none;}
+#search_advance .block h4 {font-size: 16px; color: #3D312A; font-weight: 100; margin-bottom: 13px}
+#search_advance .block table {width: 100%;}
+#search_advance .block table td {width: 25%; padding: 5px 0;}
+#search_advance .block.last table td {padding: 5px 5px; }
+#search_advance .block.last table td select {width: 190px}
+#search_advance .block.last table td label {margin-bottom: 7px; font-size: 16px; display: block; font-weight: 100;}
+#search_advance .block.last p {text-align: center; margin: 20px 0 0;}
+#search_advance .block.last p input.btn {
+    height: 31px;
+    padding: 5px 70px !important;
+}
+#search_advance div.cmf-skinned-select .cmf-skinned-text {color: #666666;}
+label.checkSkin {
+    color: #666666;
+    float: left;
+    font-weight: 100;
+    padding-left: 7px;
+    padding-top: 2px;
+    margin-bottom: 13px;
+}
+input.checkSkin[type="checkbox"] {
+    display: none;
+}
+input.checkSkin[type="checkbox"]:checked + label {
+    background: url("../media/icn-check-skin.png") no-repeat scroll 0 bottom transparent;
+}
+input.checkSkin[type="checkbox"] + label {
+    background: url("../media/icn-check-skin.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 21px;
+    text-indent: -1000em;
+    width: 21px;
+    float: left;
+}
+
+
+/*input[type=checkbox] {display: none;}
+input[type=checkbox] + label {
+background: #fff;
+display: inline-block;
+width: 16px;
+height: 16px;
+background: url(img/check_02.png) 0px 0px no-repeat;
+text-indent: -1000em;
+}
+input[type=checkbox]:checked + label {
+background: url(img/check_02.png) 0px -16px no-repeat;
+}*/
+
+
+
+
+
+
+#modals_content {display: none;}
 /* ****************************************************************************************************************
     MEDIA QUERIES
 **************************************************************************************************************** */
