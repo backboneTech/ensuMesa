@@ -256,28 +256,36 @@ input.checkSkin[type="checkbox"] + label {
     float: left;
 }
 
-
-
-
-
-/*input[type=checkbox] {display: none;}
-input[type=checkbox] + label {
-background: #fff;
-display: inline-block;
-width: 16px;
-height: 16px;
-background: url(img/check_02.png) 0px 0px no-repeat;
-text-indent: -1000em;
+/* ****************************************************************************************************************
+    MENU PRINCIPAL
+**************************************************************************************************************** */
+nav {overflow: hidden;}
+nav ul li {float: left;}
+nav ul li ul li {float: none;}
+nav ul li a.menu {
+    background-color: #624C3D;
+    color: #FFFFFF;
+    display: table-cell;
+    font-size: 13px;
+    height: 49px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 97px;
 }
-input[type=checkbox]:checked + label {
-background: url(img/check_02.png) 0px -16px no-repeat;
-}*/
+nav ul li a.menu:hover {
+    color: #3DAAA8;
+    text-decoration: none;
+    background-color: #FFFFFF;
+}
+nav .level-2 {display: none;}
 
 
 
-
-
-
+/* ****************************************************************************************************************
+    MODALS
+**************************************************************************************************************** */
 #modals_content {display: none;}
 /* ****************************************************************************************************************
     MEDIA QUERIES

@@ -6,6 +6,29 @@ $(document).ready(function(){
         $('.cart_summary').slideToggle();
         return false;
     })
+
+    // MENU **********************************************************************
+      $(".main_nav li:has(div)").addClass("menu-level");
+      $('.main_nav a.menu').mouseenter(function(){
+        $('.level-2').hide();
+        $('li.menu-level a.menu').removeClass('over');
+      });
+
+      $('a.menu').mouseover(function(){
+        if($(this).hasClass('over'))
+        {
+
+        }
+        else
+        {
+          $(this).addClass('over')
+          $(this).next('.level-2').show();
+        }
+      });
+      $('.level-2').mouseleave(function(){
+        $('.level-2').hide();
+        $('li.menu-level a.menu').removeClass('over');
+      });
 });
 $(window).load(function(){ 
     // executes when complete page is fully loaded, including all frames, objects and images
