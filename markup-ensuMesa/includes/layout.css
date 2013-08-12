@@ -66,7 +66,7 @@ input[placeholder] {color: #999999;}
     color:    #999;
 }
 /* ****************************************************************************************************************
-    estilos con posibles cambios de temas
+    estilos con posibles cambios de temas (colores)
 **************************************************************************************************************** */
 a.btn,
 input.btn {
@@ -82,6 +82,8 @@ input.btn {
 a.btn:hover,
 input.btn:hover {background-color:#48CAC8; text-decoration: none;}
 .cart_summary .botones .close {color: #3DAAA8;}
+
+footer .newsletter_block h4 {color: #3DAAA8;}
 /* ****************************************************************************************************************
     HEADER
 **************************************************************************************************************** */
@@ -300,11 +302,12 @@ nav.main_nav ul li .level-2 {
     padding: 15px 0;
     position: absolute;
     top: 49px;
-    width: 929px;
+    width: 960px;
+    z-index: 99;
 }
 nav.main_nav ul li .level-2 ul {
     float: left;
-    margin: 0 33px;
+    margin: 0 35px;
 }
 nav.main_nav ul li .level-2 ul.last {margin-right: 0;}
 nav.main_nav ul li .level-2 ul.last li.last {margin-top: 10px;}
@@ -314,6 +317,98 @@ nav.main_nav ul li .level-2 ul li h3 a:hover {color: #666666;}
 nav.main_nav ul li .level-2 ul li a {padding-left: 8px; font-size: 12px; font-weight: 100; color: #666666;}
 nav.main_nav ul li .level-2 ul li a:hover {color: #3DAAA8; text-decoration: none; }
 
+nav.main_nav ul li:nth-child(n+2) .level-2 {width:685px;}
+/* ****************************************************************************************************************
+    SECTION SOCIAL MODULE
+**************************************************************************************************************** */
+#social_module {background-color: #EFE9E2; padding: 20px 0; margin: 10px 0;}
+#social_module h2 {text-align: center; font-weight: 600;}
+#social_module .block {float: left; margin: 30px 1.5%; width: 30%;}
+#social_module .block h3 {
+    background: url(../media/icn-social-title.png) no-repeat right top;
+    font-size: 16px; 
+    font-weight:100; 
+    border-bottom: 1px solid #BFBAB5; 
+    padding-bottom: 4px; 
+    margin-bottom: 10px;
+    height: 27px;
+}
+#social_module .facebook.block h3   {background-position: right -11px;}
+#social_module .twitter.block h3    {background-position: right -92px;}
+#social_module .pinterest.block h3  {background-position: right -180px;}
+
+/* ****************************************************************************************************************
+    FOOTER
+**************************************************************************************************************** */
+footer {padding: 30px 0;}
+footer ul {float: left; margin: 0 36px;}
+footer ul li {margin-bottom: 7px;}
+footer ul li h3 {font-size: 16px; font-weight: 100;}
+footer ul li a {font-size: 12px; color: #6C564F; font-weight: 100;}
+footer ul li a:hover {color: #3DAAA8; text-decoration: none;}
+
+footer ul.first {margin: 0 30px 0 0;}
+footer ul.first li {font-size: 11px; margin: 4px 0;}
+footer ul.first li h1 {margin-bottom: 10px;}
+footer ul.first li a {text-decoration: underline; color: #6C564F; font-size: 11px;}
+footer ul.first li a:hover {text-decoration: none;}
+
+footer .social_module {margin-left: 50px;}
+footer .social_module li {float: left; margin-right: 6px;}
+footer .social_module li a {
+    background: url(../media/btn-social-module.png) no-repeat left top;
+    display: block;
+    text-indent: -9000px;
+    height: 36px;
+    width: 38px;
+}
+footer .social_module li a:hover {background-position: left bottom;}
+
+footer .social_module li a.facebook {background-position: left top;}
+footer .social_module li a.facebook:hover {background-position: left bottom;}
+
+footer .social_module li a.twitter {background-position: -45px top;}
+footer .social_module li a.twitter:hover {background-position:-45px bottom ;}
+
+footer .social_module li a.pinterest {background-position: -88px top;}
+footer .social_module li a.pinterest:hover {background-position: -88px bottom;}
+
+footer .social_module li a.youtube {background-position: -132px top;}
+footer .social_module li a.youtube:hover {background-position:-132px bottom;}
+
+footer .social_module li a.instagram {background-position: -179px top;}
+footer .social_module li a.instagram:hover {background-position:-179px bottom;}
+
+footer .newsletter_block {
+    background: url("../media/bg-newsletter-block.png") no-repeat scroll left top transparent;
+    height: 69px;
+    margin-left: 20px;
+    margin-top: 3px;
+    padding: 15px;
+    width: 247px;
+}
+footer .newsletter_block h4 {
+    color: #3DAAA8;
+    font-family: 'merriweather';
+    font-size: 15px;
+    font-weight: 100;
+    margin: 9px 0;
+    text-align: center;
+}
+footer .newsletter_block input[type="email"] {
+    float: left;
+    font-size: 11px;
+    height: 15px;
+    padding: 2px 5px;
+    width: 170px;
+    margin-left: 5px;
+}
+footer .newsletter_block input[type="submit"] {
+    float: left;
+    font-size: 11px;
+    height: 21px;
+    padding: 0 9px 3px !important;
+}
 /* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
@@ -326,7 +421,14 @@ nav.main_nav ul li .level-2 ul li a:hover {color: #3DAAA8; text-decoration: none
 	@media only screen and (max-width: 959px) {}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+        nav.main_nav ul li a.menu {font-size: 12px; padding: 0 6px;}
+        nav.main_nav ul li:nth-child(n+6) a {width: 99px;}
+        nav.main_nav ul li.menu-level a.menu {background-position: 89% 52%;}
+        nav.main_nav ul li.menu-level a.menu:hover, 
+        nav.main_nav ul li.menu-level a.menu.over {background-position: 89% 52%;}
+        nav.main_nav ul li:nth-child(n+2) .level-2 {width: 550px;}
+    }
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {}
