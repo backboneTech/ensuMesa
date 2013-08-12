@@ -259,10 +259,10 @@ input.checkSkin[type="checkbox"] + label {
 /* ****************************************************************************************************************
     MENU PRINCIPAL
 **************************************************************************************************************** */
-nav {overflow: hidden;}
-nav ul li {float: left;}
-nav ul li ul li {float: none;}
-nav ul li a.menu {
+nav.main_nav {}
+nav.main_nav ul li {float: left; position: relative;}
+nav.main_nav ul li ul li {float: none;}
+nav.main_nav ul li a.menu {
     background-color: #624C3D;
     color: #FFFFFF;
     display: table-cell;
@@ -274,14 +274,45 @@ nav ul li a.menu {
     vertical-align: middle;
     width: 97px;
 }
-nav ul li a.menu:hover {
+nav.main_nav ul li a.menu:hover,
+nav.main_nav ul li.menu-level a.menu.over {
     color: #3DAAA8;
     text-decoration: none;
     background-color: #FFFFFF;
 }
-nav .level-2 {display: none;}
+nav.main_nav .level-2 {display: none;}
 
-
+nav.main_nav ul li.menu-level a.menu {
+    background-image: url(../media/arrow-mainMenu.png);
+    background-repeat: no-repeat;
+    background-position: 85% 52%;
+}
+nav.main_nav ul li.menu-level a.menu:hover,
+nav.main_nav ul li.menu-level a.menu.over {
+    background-image: url(../media/arrow-mainMenu-over.png);
+    background-repeat: no-repeat;
+    background-position: 85% 52%;
+}
+nav.main_nav ul li .level-2 {
+    background-color: #FFFFFF;
+    left: 0;
+    overflow: hidden;
+    padding: 15px 0;
+    position: absolute;
+    top: 49px;
+    width: 929px;
+}
+nav.main_nav ul li .level-2 ul {
+    float: left;
+    margin: 0 33px;
+}
+nav.main_nav ul li .level-2 ul.last {margin-right: 0;}
+nav.main_nav ul li .level-2 ul.last li.last {margin-top: 10px;}
+nav.main_nav ul li .level-2 ul li {margin: 4px 0;}
+nav.main_nav ul li .level-2 ul li h3 a {padding-left: 0px; text-transform: uppercase; font-size: 12px; color: #3DAAA8; font-weight: 600;}
+nav.main_nav ul li .level-2 ul li h3 a:hover {color: #666666;}
+nav.main_nav ul li .level-2 ul li a {padding-left: 8px; font-size: 12px; font-weight: 100; color: #666666;}
+nav.main_nav ul li .level-2 ul li a:hover {color: #3DAAA8; text-decoration: none; }
 
 /* ****************************************************************************************************************
     MODALS
