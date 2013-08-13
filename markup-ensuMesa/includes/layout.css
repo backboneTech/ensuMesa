@@ -400,7 +400,7 @@ footer .newsletter_block input[type="email"] {
     font-size: 11px;
     height: 15px;
     padding: 2px 5px;
-    width: 170px;
+    width: 160px;
     margin-left: 5px;
 }
 footer .newsletter_block input[type="submit"] {
@@ -409,6 +409,55 @@ footer .newsletter_block input[type="submit"] {
     height: 21px;
     padding: 0 9px 3px !important;
 }
+
+/* ****************************************************************************************************************
+    HOME SLIDER ACCORDION
+**************************************************************************************************************** */
+#home_gallery {background-color: #EFE9E2; margin-top: 15px; padding: 20px 0 0;}
+#home_gallery h2 {font-family: 'merriweather'; margin-left: 32px; margin-bottom: 10px; font-weight: 100; font-size: 24px;}
+#home_gallery ul {margin: 0 auto;}
+#home_gallery ul li {position:relative; border-left: 1px solid #FFFFFF;}
+#home_gallery ul li:first-child {border-left: none;}
+#home_gallery ul div.slider-bg {background-color: #EFE9E2;top:334px;height:102px;width:555px;left:0;position:absolute;z-index:10;}
+#home_gallery ul div.slider-info {top:330px;height:72px;left:0;position:absolute;width:130px;z-index:15;padding:15px; line-height: 22px;}
+#home_gallery ul div.slider-info h4 {font-size:20px;color:#3DAAA8;margin-bottom:5px; line-height: 25px; font-weight: 600;}
+#home_gallery ul div.slider-info h4 a {font-size:20px;color:#3DAAA8;margin-bottom:5px; font-weight: 600;}
+#home_gallery ul div.slider-info p {display:none;font-size:12px;line-height:16px;color:#666;margin:0 !important;}
+#home_gallery ul div.slider-info .author span {color:#3DAAA8; }
+#home_gallery ul li.slider-open div.slider-info {width:525px;}
+#home_gallery ul li.slider-open div.slider-info strong {font-size:20px; font-weight: 600; color: #3DAAA8;}
+#home_gallery ul li.slider-open div.slider-info p {display:block;}
+
+
+/* MENU RECETAS */
+#recetas_nav {margin: 20px 0; overflow: hidden;}
+#recetas_nav h4.question {
+    background: url(../media/bg-menu-recetas.png) no-repeat center;
+    color: #3D312A;
+    font-family: 'merriweather';
+    height: 66px;
+    width: 237px;
+    font-size: 17px;
+    text-align: center;
+    float: left;
+    margin-left: 40px;
+} 
+#recetas_nav h4.question p {margin-top: 22px;}
+#recetas_nav ul {overflow: hidden; margin-left: 20px; float: left; margin-top:15px; }
+#recetas_nav li {float: left; padding: 0 30px; border-left: 1px solid #CCCCCC;}
+#recetas_nav li p {
+    font-weight: 100;
+    line-height: 14px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+#recetas_nav li a { color: #3D312A; font-family: 'merriweather';}
+#recetas_nav li a:hover {color: #3DAAA8; text-decoration: none;}
+
+
+
+
+
 /* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
@@ -428,6 +477,16 @@ footer .newsletter_block input[type="submit"] {
         nav.main_nav ul li.menu-level a.menu:hover, 
         nav.main_nav ul li.menu-level a.menu.over {background-position: 89% 52%;}
         nav.main_nav ul li:nth-child(n+2) .level-2 {width: 550px;}
+
+        /*HOME GALLERY*/
+        #home_gallery ul div.slider-info {top: 245px; width: 110px;}
+        #home_gallery ul li.slider-open div.slider-info p.slider-text {display: none;}
+        #home_gallery ul li.slider.slider-closed .slider-info h4 {font-size: 16px; line-height: 19px;}
+        #home_gallery ul li.slider.slider-closed .slider-info h4 a {font-size: 16px;}
+
+        #recetas_nav h4.question {margin-left: 25px;}
+        #recetas_nav ul {margin-left: 20px;}
+        #recetas_nav li {padding: 0 12px;}
     }
 
 	/* All Mobile Sizes (devices and browser) */

@@ -62,6 +62,104 @@
 		});
 	</script>
 
+	<!-- HOME SLIDER ACCORDION -->
+	<script src="includes/js/enquire.min.js"></script>
+	<script src="includes/js/jquery.zaccordion.min.js"></script>
+	<script>
+		// $(document).ready(function() {
+		// 	$("#home_gallery ul").zAccordion({
+		// 		width: 900,
+		// 		speed: 600,
+		// 		slideClass: "slider",
+		// 		slideWidth: 555,
+		// 		height: 436,
+		// 		auto: false,
+		// 	});
+		// });
+		$(document).ready(function() {
+			var example = $('#home_gallery ul'), defaults = {
+				buildComplete: function () {
+					example.css('visibility', 'visible');
+				},
+				timeout: 5500
+			};
+			function build(x) {
+				var opts, current;
+				if (!$.isEmptyObject(example.data())) { /* If an zAccordion is found, rebuild it with new settings. */
+					example.css('visibility', 'hidden');
+					current = example.data('current');
+					opts = $.extend({
+						startingSlide: current
+					}, defaults, x);
+					example.zAccordion('destroy', {
+						removeStyleAttr: true,
+						removeClasses: true,
+						destroyComplete: {
+							afterDestroy: function() {
+								try {
+									console.log('zAccordion destroyed! Attempting to rebuild...');
+								} catch (e) {}
+							},
+							rebuild: opts
+						}
+					});
+				} else { /* If no zAccordion is found, build one from scratch. */
+					example.css('visibility', 'hidden');
+					opts = $.extend(defaults, x);
+					example.zAccordion(opts);
+				}
+			}
+			/* A unique Media Query is registered for each screen size. */
+			enquire.register('screen and (min-width: 960px)', { /* Standard screen sizes and a default build for browsers that are unsupported. */
+				match : function () {
+					build({
+						width: 900,
+						speed: 600,
+						slideClass: "slider",
+						slideWidth: 555,
+						height: 436,
+						auto: false,
+					});
+				} /* The *true* value below means this media query will fire by default. */
+			}, true).register('screen and (min-width: 768px) and (max-width: 959px)', {
+				match : function () {
+					build({
+						speed: 600,
+						slideWidth: 420,
+						width: 705,
+						height: 330,
+						slideClass: "slider",
+						auto: false,
+					});
+				}
+			}).register('screen and (min-width: 480px) and (max-width: 767px)', {
+				match : function () {
+					build({
+						slideWidth: 220,
+						width: 380,
+						height: 200
+					});
+				}
+			}).register('screen and (max-width: 479px)', {
+				match : function () {
+					if (!$.isEmptyObject(example.data())) {
+						example.zAccordion('destroy', {
+							removeStyleAttr: true,
+							removeClasses: true,
+							destroyComplete: {
+								afterDestroy: function() {
+									try {
+										console.log('zAccordion destroyed!');
+									} catch (e) {}
+								}
+							}
+						});
+					}
+				}
+			});
+		});
+	</script>
+
 	<script src="includes/js/functions.js"></script>
 
 	<!-- Favicons
@@ -235,7 +333,50 @@
 			</div>
 		</nav>
 
-		<section class="page_content"></section>
+		<div class="page_content container">
+			<section id="home_gallery">
+				<h2>Sábados de parrilla al estilo americano</h2>
+				<ul id="slides_acc">
+					<li>
+						<img src="media/fpo-img-home-gallery.jpg">
+						<div class="slider-bg"></div>
+						<div class="slider-info">
+							<h4><a href="">Alitas de pollo a la parrilla</a></h4>
+							<p class="author">Por: <span>Juan Fernando Herran</span></p>
+							<p class="slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor lacus sollicitudin ligula sagittis a ultricies nulla ultricies. Ut odio nisi, posuere sed blandit at, bibendum non dolor.</p>
+						</div>
+					</li>
+					<li>
+						<img src="media/fpo-img-home-gallery.jpg">
+						<div class="slider-bg"></div>
+						<div class="slider-info">
+							<h4><a href="">Alitas de pollo a la parrilla</a></h4>
+							<p class="author">Por: <span>Juan Fernando Herran</span></p>
+							<p class="slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor lacus sollicitudin ligula sagittis a ultricies nulla ultricies. Ut odio nisi, posuere sed blandit at, bibendum non dolor.</p>
+						</div>
+					</li>
+					<li>
+						<img src="media/fpo-img-home-gallery.jpg">
+						<div class="slider-bg"></div>
+						<div class="slider-info">
+							<h4><a href="">Alitas de pollo a la parrilla</a></h4>
+							<p class="author">Por: <span>Juan Fernando Herran</span></p>
+							<p class="slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor lacus sollicitudin ligula sagittis a ultricies nulla ultricies. Ut odio nisi, posuere sed blandit at, bibendum non dolor.</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section id="recetas_nav">
+				<h4 class="question"><p>¿Qué recetas busca?</p></h4>
+				<ul>
+					<li><p>Recetas</p><a href="">Vegetarianas</a></li>
+					<li><p>Recetas</p><a href="">Fáciles</a></li>
+					<li><p>Recetas</p><a href="">Saludables</a></li>
+					<li><p>Recetas</p><a href="">Creativas</a></li>
+					<li><p>Recetas</p><a href="">Postres</a></li>
+				</ul>
+			</section>
+		</div>
 		
 		<section id="social_module">
 			<div class="container">
@@ -289,7 +430,7 @@
 				</ul>
 				<div class="newsletter_block clearfix">
 					<h4>Reciba nuestro Newsletter</h4>
-					<input type="email" placeholder="email@email.com"> <input class="btn" type="submit" value="enviar">
+					<input type="email" placeholder="email@email.com"> <input class="btn" type="submit" value="suscribir">
 				</div>
 			</div>
 		</footer>
