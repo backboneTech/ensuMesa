@@ -32,6 +32,38 @@
 	<script src="includes/js/modernizr-2.5.3.min.js"></script>
 
 	<script src="includes/js/jquery.flexslider-min.js"></script>
+	<script>
+		$(window).load(function(){
+		    // FLEXSLIDER ///////////////////////////////////////////////////////////
+		    $('#promo_fanaticos.flexslider').flexslider({
+		      animation: "slide",  
+		      directionNav: false,
+		      prevText: "Previous",
+		      nextText: "Next",
+		      controlNav: true,
+		      controlsContainer: ".controls",
+		      start: function(slider) {
+		        slider.removeClass('loading');
+		      }
+		    });
+		    $('.flexslider.carrusel').flexslider({
+		    	animation: "slide",	
+		    	directionNav: true,
+				prevText: "Previous",
+				nextText: "Next",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false, 
+				itemMargin: 3,
+				itemWidth: 78,
+				minItems: 0,
+				maxItems: 3,
+				start: function(slider) {
+				  slider.removeClass('loading');
+				}
+		    });
+		});
+	</script>
 
 	<!-- SELECT SKIN -->
 	<script src="includes/js/select-skin/jquery.select_skin.js"></script>
@@ -342,7 +374,7 @@
 						<div class="slider-bg"></div>
 						<div class="slider-info">
 							<h4><a href="">Alitas de pollo a la parrilla</a></h4>
-							<p class="author">Por: <span>Juan Fernando Herran</span></p>
+							<p class="author">Por: <a href="">Juan Fernando Herran</a></p>
 							<p class="slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor lacus sollicitudin ligula sagittis a ultricies nulla ultricies. Ut odio nisi, posuere sed blandit at, bibendum non dolor.</p>
 						</div>
 					</li>
@@ -351,7 +383,7 @@
 						<div class="slider-bg"></div>
 						<div class="slider-info">
 							<h4><a href="">Alitas de pollo a la parrilla</a></h4>
-							<p class="author">Por: <span>Juan Fernando Herran</span></p>
+							<p class="author">Por: <a href="">Juan Fernando Herran</a></p>
 							<p class="slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor lacus sollicitudin ligula sagittis a ultricies nulla ultricies. Ut odio nisi, posuere sed blandit at, bibendum non dolor.</p>
 						</div>
 					</li>
@@ -360,7 +392,7 @@
 						<div class="slider-bg"></div>
 						<div class="slider-info">
 							<h4><a href="">Alitas de pollo a la parrilla</a></h4>
-							<p class="author">Por: <span>Juan Fernando Herran</span></p>
+							<p class="author">Por: <a href="">Juan Fernando Herran</a></p>
 							<p class="slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor lacus sollicitudin ligula sagittis a ultricies nulla ultricies. Ut odio nisi, posuere sed blandit at, bibendum non dolor.</p>
 						</div>
 					</li>
@@ -375,6 +407,137 @@
 					<li><p>Recetas</p><a href="">Creativas</a></li>
 					<li><p>Recetas</p><a href="">Postres</a></li>
 				</ul>
+			</section>
+			<section id="home_blocks">
+				<!-- COLUMN LEFT -->
+				<div class="columns">
+					<div id="promo_fanaticos">
+						<ul>
+							<li>
+								<article>
+									<div class="header">
+										<h3>Fanáticos del sabor</h3>
+										<h2>Chocolate negro</h2>
+										<h6>Un placer para tu vida</h6>
+									</div>
+									<img src="media/fpo-img-fanaticos-sabor.jpg">
+									<div class="copy">
+										<h5>Mousse de chocolate y fresas</h5>
+										<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+									</div>
+									<div class="promo_logo">
+										<img src="media/fpo-logo-promo-fanaticos.png">
+									</div>
+								</article>
+							</li>
+							<li>
+								<article>
+									<div class="header">
+										<h3>Fanáticos del sabor</h3>
+										<h2>Chocolate negro Chocolate negro</h2>
+										<h6>Un placer para tu vida</h6>
+									</div>
+									<img src="media/fpo-img-fanaticos-sabor.jpg">
+									<div class="copy">
+										<h5>Mousse de chocolate y fresas</h5>
+										<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+									</div>
+									<div class="promo_logo">
+										<img src="media/fpo-logo-promo-fanaticos.png">
+									</div>
+								</article>
+							</li>
+							<li>
+								<article>
+									<div class="header">
+										<h3>Fanáticos del sabor</h3>
+										<h2>Chocolate negro 2</h2>
+										<h6>Un placer para tu vida</h6>
+									</div>
+									<img src="media/fpo-img-fanaticos-sabor.jpg">
+									<div class="copy">
+										<h5>Mousse de chocolate y fresas Mousse de chocolate y fresas</h5>
+										<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+									</div>
+									<div class="promo_logo">
+										<img src="media/fpo-logo-promo-fanaticos.png">
+									</div>
+								</article>
+							</li>
+						</ul>
+					</div>
+
+					<div id="gAdd_block">Google Ads</div>
+
+					<div id="coleccion_destacada" class="block">
+						<h2>Colección <b>destacada</b></h2>
+						<div class="rating">
+							<img src="media/fpo-star-raiting.png">
+						</div>
+						<div class="img_cont">
+							<img width="135" src="media/fpo-img-receta-thumb.jpg">
+							<img width="64" src="media/fpo-img-receta-thumb.jpg">
+							<img width="64" src="media/fpo-img-receta-thumb.jpg">
+							<img width="64" src="media/fpo-img-receta-thumb.jpg">
+							<img width="64" src="media/fpo-img-receta-thumb.jpg">
+						</div>
+						<h3>Fin de semana en la finca</h3>
+						<p class="autor">Por: <a href="">Juan Fernando Herran</a></p>
+					</div>
+				</div>
+				<!-- COLUMN CENTER -->
+				<div class="columns">
+					<div id="invitado" class="block">
+						<h2>Invitado <b>ensuMesa</b></h2>
+						<img class="text_center" src="media/fpo-img-invitado.jpg">
+						<h6 class="text_center">Chef</h6>
+						<p class="text_center">- <a href="">Jhonson Miller</a> -</p>
+						<p class="quote text_center">"Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Lorem ipsum dolor sit amet faucibus"</p>
+						<div class="flexslider carrusel">
+							<ul class="slides">
+								<li>
+									<a href=""><img width="86" src="media/fpo-img-receta-thumb.jpg"></a>
+								</li>
+								<li>
+									<a href=""><img width="86" src="media/fpo-img-receta-thumb.jpg"></a>
+								</li>
+								<li>
+									<a href=""><img width="86" src="media/fpo-img-receta-thumb.jpg"></a>
+								</li>
+								<li>
+									<a href=""><img width="86" src="media/fpo-img-receta-thumb.jpg"></a>
+								</li>
+								<li>
+									<a href=""><img width="86" src="media/fpo-img-receta-thumb.jpg"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div id="blog" class="block">
+						<h2>Blog <b>ensuMesa</b></h2>
+						<div class="img_cont">
+							<img src="media/img-blog-post.jpg">
+							<p class="categoria"><a href="">Categoría</a></p>
+						</div>
+						<h3><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing.</a></h3>
+						<p class="author">Por: <a href="">Juan Herran</a></p>
+						<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames.</p>
+						<p class="text_center"><a class="btn" href=""> Más en nuestro blog</a></p>
+					</div>
+				</div>
+
+				<!-- COLUMN RIGHT -->
+				<div class="columns">
+					<div id="cuaderno">
+						<div class="header">
+							<h3>Mi cuaderno de cocina</h3>
+							<p>Comunidad de amigos de la cocina</p>
+							<h5>Un espacio para organizar sus  recetas favoritas</h5>
+						</div>
+						<br><br><br><br><br><br><br><br>
+					</div>
+				</div>
 			</section>
 		</div>
 		

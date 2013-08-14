@@ -27,6 +27,7 @@ html {
     font-size: 13px;
     font-family: 'roboto';
 }
+.text_center {text-align: center;}
 h1 {
     font-family: 'merriweather';
     font-size:24px;
@@ -78,6 +79,7 @@ input.btn {
     font-size: 12px;
     font-weight: 100;
     cursor: pointer;
+    display: inline-block;
 }
 a.btn:hover,
 input.btn:hover {background-color:#48CAC8; text-decoration: none;}
@@ -429,7 +431,9 @@ footer .newsletter_block input[type="submit"] {
 #home_gallery ul li.slider-open div.slider-info p {display:block;}
 
 
-/* MENU RECETAS */
+/* ****************************************************************************************************************
+    MENU RECETAS
+**************************************************************************************************************** */
 #recetas_nav {margin: 20px 0; overflow: hidden;}
 #recetas_nav h4.question {
     background: url(../media/bg-menu-recetas.png) no-repeat center;
@@ -454,10 +458,112 @@ footer .newsletter_block input[type="submit"] {
 #recetas_nav li a { color: #3D312A; font-family: 'merriweather';}
 #recetas_nav li a:hover {color: #3DAAA8; text-decoration: none;}
 
+/* ****************************************************************************************************************
+    BLOCK FANATICOS DEL SABOR
+**************************************************************************************************************** */
+#promo_fanaticos {
+    background: url(../media/bg-promo-fanaticos.png) repeat-y left top;
+    padding: 10px 7px;
+    width: 266px;
+}
+#promo_fanaticos li {display: none;}
+#promo_fanaticos article {width: 266px;}
+#promo_fanaticos .header {
+    background-color: #3D312A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    width: 244px;
+}
+#promo_fanaticos .header h3 {
+    background: url("../media/misc-title-line.png") repeat-x scroll center bottom transparent;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 0 40px;
+    padding-bottom: 4px;
+}
+#promo_fanaticos .header h2 {
+    color: #FFFFFF;
+    font-family: 'merriweather';
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 31px;
+    margin: 8px 0;
+    text-transform: uppercase;
+}
+#promo_fanaticos .copy {
+    background-color: #EFE9E2;
+    line-height: 16px;
+    padding: 5px 10px;
+}
+#promo_fanaticos .copy h5 {font-size: 13px; color: #333333;}
+#promo_fanaticos .copy .chef {font-size: 11px;}
 
 
+#gAdd_block {
+    height: 166px;
+    width: 200px;
+    background-color:#EFE9E2;
+    margin: 25px auto;
+}
 
+#home_blocks .block .img_cont {overflow: hidden; position: relative;}
 
+#home_blocks .columns {width: 31%;}
+#home_blocks .block {
+    position: relative;
+    border-top: 1px solid #CCCCCC ;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 20px 0;
+}
+#home_blocks .block h2 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+#home_blocks .block h2 b {text-transform: none; font-weight: 600;}
+
+#coleccion_destacada {}
+#coleccion_destacada img {float: left; margin: 4px;}
+#coleccion_destacada h3 {font-size: 16px; color: #3DAAA8;}
+#coleccion_destacada .rating {position: absolute; right: 0; top: 25px;}
+
+#invitado {text-align: center;}
+#invitado h2 {text-align: left;}
+#invitado img {margin: 10px 0;}
+
+#blog.block {border-top: none;}
+#blog.block .img_cont {margin: 10px 0;}
+#blog.block .img_cont .categoria {
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+    padding: 1% 2%;
+    text-align: right;
+}
+#blog.block h3 {font-size: 16px;}
+#blog.block .author {font-size: 11px; margin: 3px 0;}
+#blog.block .btn {margin-top: 15px;}
+
+#cuaderno {
+    background: url(../media/bg-cuaderno-argollado.jpg) repeat-y left top;
+    padding-left: 28px;
+}
+#cuaderno .header {
+    background: url("../media/bg-header-cuaderno.png") no-repeat scroll left top transparent;
+    padding: 10px 65px 10px 10px;
+    text-align: center;
+}
+#cuaderno .header h3 {font-family: 'merriweather'; font-size: 18px; color: #3D312A; margin: 0 30px;}
+#cuaderno .header p {font-size: 11px; color: #624C3D; text-decoration: underline;}
+#cuaderno .header h5 {
+    color: #3D312A;
+    font-size: 12px;
+    line-height: 13px;
+    margin-top: 6px;
+    text-transform: uppercase;
+}
 /* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
@@ -487,6 +593,7 @@ footer .newsletter_block input[type="submit"] {
         #recetas_nav h4.question {margin-left: 25px;}
         #recetas_nav ul {margin-left: 20px;}
         #recetas_nav li {padding: 0 12px;}
+        #home_blocks .columns {width: 44%;}
     }
 
 	/* All Mobile Sizes (devices and browser) */
@@ -541,20 +648,20 @@ footer .newsletter_block input[type="submit"] {
         background: url("../media/slider-controls.png") no-repeat scroll left 0 transparent;
         cursor: pointer;
         display: block;
-        height: 73px;
-        margin: -20px 0 0;
+        height: 50px;
+        margin: -25px 0 0;
         position: absolute;
         text-indent: -9999px;
         top: 50%;
-        width: 30px;
-        z-index: 10; 
+        width: 20px;
+        z-index: 10;
         /*opacity: 0; */
         /*-webkit-transition: all .3s ease;*/
     }
-    .flex-direction-nav .flex-next {background-position: right 0; right: 5%; }
-    .flex-direction-nav .flex-prev {left: 5%;}
-    .flexslider .flex-next:hover {background-position: right -69px;}
-    .flexslider .flex-prev:hover {background-position: left -69px;}
+    .flex-direction-nav .flex-next {background-position: right 0; right: -12%; }
+    .flex-direction-nav .flex-prev {left: -12%;}
+    .flexslider .flex-next:hover {background-position: right bottom;}
+    .flexslider .flex-prev:hover {background-position: left bottom;}
     /*.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;}*/
     .flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
     .flexslider .flex-prev.flex-disabled:hover {background-position: left 0;}
@@ -562,11 +669,11 @@ footer .newsletter_block input[type="submit"] {
 
     /* Control Nav */
     .flex-control-nav {
-    bottom: 2%;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-}
+        bottom: 2%;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
     .flex-control-nav li {margin: 0 3px; display: inline-block; zoom: 1; *display: inline;}
     .flex-control-paging li a {
         width: 15px; 
@@ -591,6 +698,9 @@ footer .newsletter_block input[type="submit"] {
         height: 482px;
     }
     
+    #invitado .flexslider.carrusel {width: 243px; margin: 0 auto;}
+    #invitado .flexslider.carrusel .slides li {margin-right: 3px;}
+
 /* **************************************************************************************************************** 
     @FONT-FACE
 **************************************************************************************************************** */

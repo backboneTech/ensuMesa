@@ -29,6 +29,14 @@ $(document).ready(function(){
         $('.level-2').hide();
         $('li.menu-level a.menu').removeClass('over');
       });
+
+      //RANDOM LOAD PROMO FANATICOS 
+        var list = $("#promo_fanaticos li").toArray();
+        var elemlength = list.length;
+        var randomnum = Math.floor(Math.random()*elemlength);
+        var randomitem = list[randomnum];
+        $(randomitem).css("display", "block");
+
 });
 $(window).load(function(){ 
     // executes when complete page is fully loaded, including all frames, objects and images
