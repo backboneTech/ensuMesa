@@ -35,12 +35,13 @@
 	<script>
 		$(window).load(function(){
 		    // FLEXSLIDER ///////////////////////////////////////////////////////////
-		    $('#promo_fanaticos.flexslider').flexslider({
+		    $('#tienda_block_home .flexslider').flexslider({
 		      animation: "slide",  
-		      directionNav: false,
+		      directionNav: true,
 		      prevText: "Previous",
 		      nextText: "Next",
-		      controlNav: true,
+		      controlNav: false,
+		      slideshow: false, 
 		      controlsContainer: ".controls",
 		      start: function(slider) {
 		        slider.removeClass('loading');
@@ -191,6 +192,16 @@
 			});
 		});
 	</script>
+
+	<!-- JQUERY UI -->
+	<script src="includes/js/jquery_ui/jquery-ui-1.10.3.custom.min.js"></script>
+	<!-- <link href="includes/js/jquery_ui/css/humanity/jquery-ui-1.10.3.custom.css" rel="stylesheet"> -->
+	<script>
+		$(function() {
+			$( "#tabs" ).tabs();
+		});
+	</script>
+
 
 	<script src="includes/js/functions.js"></script>
 
@@ -535,7 +546,108 @@
 							<p>Comunidad de amigos de la cocina</p>
 							<h5>Un espacio para organizar sus  recetas favoritas</h5>
 						</div>
-						<br><br><br><br><br><br><br><br>
+						<div class="content">
+							<ul>
+								<li>Guarde sus recetas.</li>
+								<li>Diseñe sus propios menús.</li>
+								<li>Arme sus colecciones de recetas.</li>
+								<li>Organice sus listas de mercado.</li>
+							</ul>
+							<p class="text_center"><a class="btn" href="">Regístrese</a></p>
+						</div>
+					</div>
+
+					<div id="recetas_destacadas" class="block">
+						<h2>Recetas <b>destacadas</b></h2>
+						<div id="tabs">
+						  <ul>
+						    <li><a href="#tabs-1">Recientes</a></li>
+						    <li><a href="#tabs-2">+ Calificadas</a></li>
+						    <li class="last"><a href="#tabs-3">+ Compartidas</a></li>
+						  </ul>
+						  <div id="tabs-1">
+						    <ul>
+						    	<li>
+						    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+						    		<div class="info">
+						    			<p><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+						    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						    		</div>
+						    	</li>
+						    	<li class="last">
+						    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+						    		<div class="info">
+						    			<p><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+						    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						    		</div>
+						    	</li>
+						    </ul>
+						  </div>
+						  <div id="tabs-2">
+						    <ul>
+						    	<li>
+						    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+						    		<div class="info">
+						    			<p><a href="">CALIFICADAS dolor sit amet, consectetur adipisicing elit</a></p>
+						    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						    		</div>
+						    	</li>
+						    	<li class="last">
+						    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+						    		<div class="info">
+						    			<p><a href="">CALIFICADAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+						    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						    		</div>
+						    	</li>
+						    </ul>
+						  </div>
+						  <div id="tabs-3">
+						    <ul>
+						    	<li>
+						    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+						    		<div class="info">
+						    			<p><a href="">COMPARTIDAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+						    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						    		</div>
+						    	</li>
+						    	<li class="last">
+						    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+						    		<div class="info">
+						    			<p><a href="">COMPARTIDAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+						    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						    		</div>
+						    	</li>
+						    </ul>
+						  </div>
+						</div>
+					</div>
+
+					<div id="tienda_block_home">
+						<h2>Tienda</h2>
+						<h3>ensuMesa</h3>
+						<div class="flexslider">
+							<ul class="slides">
+								<li>
+									<div class="product_tienda">
+										<img src="media/fpo-img-tienda-home.jpg">
+										<p>Lorem ipsum dolor sit amet faucibus vel vestibu condimentum suscipit fames.</p>
+									</div>
+								</li>
+								<li>
+									<div class="product_tienda">
+										<img src="media/fpo-img-tienda-home.jpg">
+										<p>SLIDES 1 ipsum dolor sit amet faucibus vel vestibu condimentum suscipit fames.</p>
+									</div>
+								</li>
+								<li>
+									<div class="product_tienda">
+										<img src="media/fpo-img-tienda-home.jpg">
+										<p>SLIDES 2 ipsum dolor sit amet faucibus vel vestibu condimentum suscipit fames.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<p class="text_center"><a class="btn" href="">Ir a la tienda</a></p>
 					</div>
 				</div>
 			</section>

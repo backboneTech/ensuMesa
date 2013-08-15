@@ -547,8 +547,11 @@ footer .newsletter_block input[type="submit"] {
 #blog.block .btn {margin-top: 15px;}
 
 #cuaderno {
-    background: url(../media/bg-cuaderno-argollado.jpg) repeat-y left top;
+    background: url("../media/bg-cuaderno-argollado.jpg") repeat-y scroll left top #EFE9E2;
     padding-left: 28px;
+    padding-bottom: 12px;
+    width: 265px;
+    margin-bottom: 20px;
 }
 #cuaderno .header {
     background: url("../media/bg-header-cuaderno.png") no-repeat scroll left top transparent;
@@ -564,6 +567,64 @@ footer .newsletter_block input[type="submit"] {
     margin-top: 6px;
     text-transform: uppercase;
 }
+#cuaderno ul {
+    font-size: 12px;
+    list-style: disc outside url("../media/list-style.png");
+    margin: 15px 0 15px 48px;
+}
+/* ****************************************************************************************************************
+    RECETAS DESTACADAS HOME BLOCK
+**************************************************************************************************************** */
+#recetas_destacadas {}
+#recetas_destacadas h2 {margin-bottom: 8px;}
+#recetas_destacadas .ui-tabs-panel ul li {overflow: hidden; margin-bottom: 10px; border-bottom: 1px solid #CCCCCC; padding-bottom: 10px;}
+#recetas_destacadas .ui-tabs-panel ul li.last {border-bottom: none; margin-bottom: 0; padding-bottom: 0;}
+#recetas_destacadas .ui-tabs-panel  ul li img {float: left;}
+#recetas_destacadas .ui-tabs-panel  ul li .info {margin-left: 100px; width: 170px;}
+#recetas_destacadas .ui-tabs-panel  .info .chef {font-size: 11px;}
+
+#tabs {}
+.ui-tabs {
+    padding: 0.2em;
+    position: relative;
+}
+.ui-tabs .ui-tabs-nav {overflow: hidden;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {cursor: default;}
+.ui-tabs .ui-tabs-nav li {
+    background-color: #EFE9E2;
+    border-top: 1px solid #EFE9E2;
+    border-right:1px solid #E1DAD1;
+    border-bottom:1px solid #E1DAD1; 
+    float: left;
+}
+.ui-tabs .ui-tabs-nav li.last {border-right: none;}
+.ui-tabs .ui-tabs-nav li a {
+    color: #3D312A;
+    float: left;
+    padding: 8px 11px;
+    text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background-color: #FFFFFF;
+    border-top: 1px solid #E1DAD1;
+    border-bottom: 1px solid #FFFFFF;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {color: #3DAAA8;}
+.ui-tabs-panel {padding: 10px 5px;}
+
+
+#tienda_block_home {background-color: #EFE9E2; margin: 25px 0; overflow: hidden; text-align: center; padding-bottom: 15px;}
+#tienda_block_home h2 {font-size: 15px; font-weight: 100; margin: 10px 0 0; color: #3D312A;}
+#tienda_block_home h3 {font-family: 'merriweather'; font-weight: 100; font-size: 21px; color: #3D312A; margin-bottom: 10px;}
+#tienda_block_home p {color: #666666;}
+#tienda_block_home .product_tienda {width: 250px; margin: 0 auto}
+#tienda_block_home .product_tienda img {margin: 0 auto 8px;}
+#tienda_block_home .flexslider {margin-bottom: 10px;}
+#tienda_block_home .flexslider .flex-direction-nav .flex-prev {left: 15%;}
+#tienda_block_home .flexslider .flex-direction-nav .flex-next {right: 15%;}
+#tienda_block_home .flexslider .flex-direction-nav a {top: 40%;}
+
+
 /* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
