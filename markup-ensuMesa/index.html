@@ -98,17 +98,24 @@
 	<!-- HOME SLIDER ACCORDION -->
 	<script src="includes/js/enquire.min.js"></script>
 	<script src="includes/js/jquery.zaccordion.min.js"></script>
+	
+	<!--[if IE ]>
 	<script>
-		// $(document).ready(function() {
-		// 	$("#home_gallery ul").zAccordion({
-		// 		width: 900,
-		// 		speed: 600,
-		// 		slideClass: "slider",
-		// 		slideWidth: 555,
-		// 		height: 436,
-		// 		auto: false,
-		// 	});
-		// });
+		$(document).ready(function() {
+			$("#home_gallery ul").zAccordion({
+				width: 900,
+				speed: 600,
+				slideClass: "slider",
+				slideWidth: 555,
+				height: 436,
+				auto: false,
+			});
+		});
+	</script>
+	<![endif]-->
+
+	<!--[if (gte IE 9)|!(IE)]><!-->
+	<script>
 		$(document).ready(function() {
 			var example = $('#home_gallery ul'), defaults = {
 				buildComplete: function () {
@@ -192,6 +199,7 @@
 			});
 		});
 	</script>
+	<!--<![endif]-->
 
 	<!-- JQUERY UI -->
 	<script src="includes/js/jquery_ui/jquery-ui-1.10.3.custom.min.js"></script>
