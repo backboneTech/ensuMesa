@@ -27,7 +27,7 @@ html {
     font-size: 13px;
     font-family: 'roboto';
 }
-.text_center {text-align: center;}
+
 h1 {
     font-family: 'merriweather';
     font-size:24px;
@@ -66,6 +66,10 @@ input[placeholder] {color: #999999;}
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #999;
 }
+
+.chef, .author {font-size: 11px;}
+.text_center {text-align: center;}
+.border_top_none  {border-top: none !important;}
 /* ****************************************************************************************************************
     estilos con posibles cambios de temas (colores)
 **************************************************************************************************************** */
@@ -325,7 +329,7 @@ nav.main_nav ul li:nth-child(n+2) .level-2 {width:685px;}
 **************************************************************************************************************** */
 #social_module {background-color: #EFE9E2; padding: 20px 0; margin: 10px 0;}
 #social_module h2 {text-align: center; font-weight: 600;}
-#social_module .block {float: left; margin: 30px 1.5%; width: 30%;}
+#social_module .block {float: left; margin: 30px 1.5%; width: 30%; border: none;}
 #social_module .block h3 {
     background: url(../media/icn-social-title.png) no-repeat right top;
     font-size: 16px; 
@@ -507,21 +511,22 @@ footer .container .column {margin: 0; width: 295px;}
     margin: 25px auto;
 }
 
-#home_blocks .block .img_cont {overflow: hidden; position: relative;}
+#home_blocks .block .img_cont,
+.block .img_cont {overflow: hidden; position: relative;}
 
 #home_blocks .columns {width: 31%;}
-#home_blocks .block {
+/*#home_blocks*/ .block {
     position: relative;
     border-top: 1px solid #CCCCCC ;
     border-bottom: 1px solid #CCCCCC;
     padding: 20px 0;
 }
-#home_blocks .block h2 {
+/*#home_blocks*/ .block h2 {
     font-weight: 100;
     text-transform: uppercase;
     font-size: 20px;
 }
-#home_blocks .block h2 b {text-transform: none; font-weight: 600;}
+/*#home_blocks*/ .block h2 b {text-transform: none; font-weight: 600;}
 
 #coleccion_destacada {}
 #coleccion_destacada img {float: left; margin: 4px;}
@@ -626,6 +631,31 @@ footer .container .column {margin: 0; width: 295px;}
 
 
 /* ****************************************************************************************************************
+    PAGINA RECETAS LANDING
+**************************************************************************************************************** */
+#page.recetas_landing {}
+#page.recetas_landing .column.left {width: 65.5%; margin-left: 0;}
+#page.recetas_landing .column.right {width: 32%; padding-bottom: 25px;}
+
+#recetas_gallery {
+    background-color: #EFE9E2;
+    padding: 10px;
+    margin-top: 20px;
+    padding: 26px;
+}
+#recetas_gallery .flexslider {margin: 0;}
+#recetas_gallery .flexslider img {margin-bottom: 8px;}
+#recetas_gallery .flexslider .flex-direction-nav a {
+    background: url("../media/slider-controls_t2.png") no-repeat scroll left center;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 324px;
+    top: 25px;
+}
+#recetas_gallery .flexslider .flex-direction-nav .flex-prev {left: 0;}
+#recetas_gallery .flexslider .flex-direction-nav .flex-next {right: 0; background-position: right center;}
+
+
+/* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
 #modals_content {display: none;}
@@ -694,7 +724,6 @@ footer .container .column {margin: 0; width: 295px;}
         margin: 0 0 40px;
         position: relative; 
         zoom: 1;
-        color: #FFFFFF;
     }
     .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
     .loading .flex-viewport {max-height: 300px;}
