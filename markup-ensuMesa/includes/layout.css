@@ -123,6 +123,32 @@ header .login_cart_module .cart {
     margin-left: 5px;
 }
 
+/* ****************************************************************************************************************
+    BREADCRUMB
+**************************************************************************************************************** */
+#breadcrumb {overflow: hidden; margin: 10px 0 0;}
+#breadcrumb li {
+    background: url("../media/breadcrumb-separator.jpg") no-repeat scroll right center transparent;
+    display: inline-block;
+    float: left;
+    height: 26px;
+    margin-right: 7px;
+    padding-left: 4px;
+    padding-right: 12px;
+    padding-top: 7px;
+}
+#breadcrumb li.first {padding-top: 4px; }
+#breadcrumb li.last {background: none}
+#breadcrumb li .home {
+    background: url(../media/breadcrump_logo.png) no-repeat left top;
+    display: block;
+    width: 25px;
+    height: 25px;
+    text-indent: -8000px;
+}
+
+#line_separetor_content {}
+#line_separetor_content #line {border-bottom: 1px solid #CCCCCC; height: 2px;}
 
 .cart_block {position: relative;}
 .cart_block .cart {cursor: pointer;}
