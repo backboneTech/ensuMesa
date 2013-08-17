@@ -70,6 +70,11 @@ input[placeholder] {color: #999999;}
 .chef, .author {font-size: 11px;}
 .text_center {text-align: center;}
 .border_top_none  {border-top: none !important;}
+.floatLeft {float: left !important;}
+.floatRight {float: right !important;}
+.borderNone {border: none !important}
+.img_thumbBig {width: 135px;}
+.img_thumbSmall {width: 64px;}
 /* ****************************************************************************************************************
     estilos con posibles cambios de temas (colores)
 **************************************************************************************************************** */
@@ -346,7 +351,8 @@ nav.main_nav ul li:nth-child(n+2) .level-2 {width:685px;}
 /* ****************************************************************************************************************
     FOOTER
 **************************************************************************************************************** */
-footer {padding: 30px 0;}
+footer {padding: 30px 0; border-top: 1px solid #CCCCCC; }
+#page.home footer {border-top:none;}
 footer ul {float: left; margin: 0 36px;}
 footer ul li {margin-bottom: 7px;}
 footer ul li h3 {font-size: 16px; font-weight: 100;}
@@ -391,6 +397,7 @@ footer .newsletter_block {
     margin-top: 3px;
     padding: 15px;
     width: 247px;
+    clear: both;
 }
 footer .newsletter_block h4 {
     color: #3DAAA8;
@@ -416,6 +423,10 @@ footer .newsletter_block input[type="submit"] {
     padding: 0 9px 3px !important;
 }
 footer .container .column {margin: 0; width: 295px;}
+footer .tablet_Row {
+    float: left;
+    overflow: hidden;
+}
 /* ****************************************************************************************************************
     HOME SLIDER ACCORDION
 **************************************************************************************************************** */
@@ -525,6 +536,7 @@ footer .container .column {margin: 0; width: 295px;}
     font-weight: 100;
     text-transform: uppercase;
     font-size: 20px;
+    margin-bottom: 7px;
 }
 /*#home_blocks*/ .block h2 b {text-transform: none; font-weight: 600;}
 
@@ -606,6 +618,7 @@ footer .container .column {margin: 0; width: 295px;}
 .ui-tabs .ui-tabs-nav li a {
     color: #3D312A;
     float: left;
+    font-size: 12px;
     padding: 8px 11px;
     text-decoration: none;
 }
@@ -631,11 +644,9 @@ footer .container .column {margin: 0; width: 295px;}
 
 
 /* ****************************************************************************************************************
-    PAGINA RECETAS LANDING
+    PAGINA :: RECETAS LANDING
 **************************************************************************************************************** */
 #page.recetas_landing {}
-#page.recetas_landing .column.left {width: 65.5%; margin-left: 0;}
-#page.recetas_landing .column.right {width: 32%; padding-bottom: 25px;}
 
 #recetas_gallery {
     background-color: #EFE9E2;
@@ -648,12 +659,23 @@ footer .container .column {margin: 0; width: 295px;}
 #recetas_gallery .flexslider .flex-direction-nav a {
     background: url("../media/slider-controls_t2.png") no-repeat scroll left center;
     background-color: rgba(0, 0, 0, 0.6);
-    height: 324px;
+    height: 319px;
     top: 25px;
 }
 #recetas_gallery .flexslider .flex-direction-nav .flex-prev {left: 0;}
 #recetas_gallery .flexslider .flex-direction-nav .flex-next {right: 0; background-position: right center;}
 
+#recetas_list {margin: 20px 0;}
+#recetas_list li {overflow: hidden; border-top: 1px solid #CCCCCC; margin: 10px 0; padding: 7px 0;}
+#recetas_list li img {float: left;}
+#recetas_list li h2 {font-weight: 600; margin-bottom: 4px;}
+#recetas_list li h2 a {color: #3D312A;}
+#recetas_list li h2 a:hover {color: #3DAAA8; text-decoration: none;}
+#recetas_list li .info {margin-left: 110px;}
+#recetas_list li .info h3 {color: #333333; font-size: 14px;}
+#recetas_list li .info h3 a {color: #333333;}
+#recetas_list li .info h3 a:hover {color: #3DAAA8; text-decoration: none;}
+#recetas_list li .info .chef {margin: 5px 0;}
 
 /* ****************************************************************************************************************
     MODALS
@@ -663,11 +685,15 @@ footer .container .column {margin: 0; width: 295px;}
     MEDIA QUERIES
 **************************************************************************************************************** */
 
-	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {}
+    /* Smaller than standard 960 (devices and browsers) */
+    @media only screen and (max-width: 959px) {}
 
-	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {
+    /* TABLET PORTRAIT SIZE TO STANDARD 960 (DEVICES AND BROWSERS) */
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+
+        .img_thumbBig {width: 135px;}
+        .img_thumbSmall {width: 64px;}
+
         nav.main_nav ul li a.menu {font-size: 12px; padding: 0 6px;}
         nav.main_nav ul li:nth-child(n+6) a {width: 99px;}
         nav.main_nav ul li.menu-level a.menu {background-position: 89% 52%;}
@@ -685,16 +711,38 @@ footer .container .column {margin: 0; width: 295px;}
         #recetas_nav ul {margin-left: 20px;}
         #recetas_nav li {padding: 0 12px;}
         #home_blocks .columns {width: 44%;}
+
+        #recetas_gallery .flexslider .flex-direction-nav a {height: 247px;}
+        .ui-tabs .ui-tabs-nav li a {font-size: 11px; padding: 8px 7px;}
+
+        #coleccion_destacada img:nth-child(n+4) {display: none;}
+        #coleccion_destacada .rating {bottom: 0; left: 0; top: inherit;}
+
+        footer .tablet_Row {
+            margin: 10px 70px;
+            overflow: hidden;
+            width: 655px;
+        }
+        footer .social_module {
+            display: block;
+            float: none;
+            margin: 0 auto;
+            overflow: hidden;
+            width: 222px;
+            margin-bottom: 10px
+        }
+        footer .newsletter_block {margin: 0 auto;}
     }
 
-	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
 
-	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+    /* All Mobile Sizes (devices and browser) */
+    @media only screen and (max-width: 767px) {}
 
-	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+    /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+    @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    @media only screen and (max-width: 479px) {}
 
 /* ****************************************************************************************************************
     FLEXSLIDER PLUGIN STYLES
