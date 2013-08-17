@@ -147,7 +147,7 @@ header .login_cart_module .cart {
     text-indent: -8000px;
 }
 
-#line_separetor_content {}
+#line_separetor_content {margin-bottom: 18px;}
 #line_separetor_content #line {border-bottom: 1px solid #CCCCCC; height: 2px;}
 
 .cart_block {position: relative;}
@@ -391,7 +391,7 @@ footer ul.first li h1 {margin-bottom: 10px;}
 footer ul.first li a {text-decoration: underline; color: #6C564F; font-size: 11px;}
 footer ul.first li a:hover {text-decoration: none;}
 
-footer .social_module {margin-left: 30px;}
+footer .social_module {margin-left: 30px; margin-bottom: 7px;}
 footer .social_module li {float: left; margin-right: 6px;}
 footer .social_module li a {
     background: url(../media/btn-social-module.png) no-repeat left top;
@@ -702,6 +702,62 @@ footer .tablet_Row {
 #recetas_list li .info h3 a {color: #333333;}
 #recetas_list li .info h3 a:hover {color: #3DAAA8; text-decoration: none;}
 #recetas_list li .info .chef {margin: 5px 0;}
+
+
+/* ****************************************************************************************************************
+    PAGINA :: RECETAS CATEGORIA
+**************************************************************************************************************** */
+#gallery_recetas_landing { background-color: #EFE9E2; width: 397px;}
+#gallery_recetas_landing .flexslider .flex-control-paging li a {
+    background: url("../media/slider-controls-recetas-categoria.png") no-repeat scroll right bottom transparent;
+}
+#gallery_recetas_landing .flexslider .flex-control-paging li a.flex-active {background-position: left bottom;}
+#gallery_recetas_landing .flex-control-nav {
+    bottom: 17%;
+    float: right;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: auto;
+}
+#gallery_recetas_landing .content .info {margin: 11px;}
+#gallery_recetas_landing .content .info h3 {font-size: 16px; padding-right: 70px;}
+#gallery_recetas_landing .content .info .chef {margin: 3px 0;}
+#recetas_cat_list {margin: 40px 0;}
+#recetas_cat_list li {border-top: 1px solid #CCCCCC; margin: 10px 0; padding: 7px 0;}
+#recetas_cat_list li img {float: left;}
+#recetas_cat_list li h2 {font-weight: 600; margin-bottom: 4px;}
+#recetas_cat_list li h2 a {color: #3D312A;}
+#recetas_cat_list li h2 a:hover {color: #3DAAA8; text-decoration: none;}
+#recetas_cat_list li .info {margin-left: 110px;}
+#recetas_cat_list li .info h3 {color: #333333; font-size: 14px;}
+#recetas_cat_list li .info h3 a {color: #333333;}
+#recetas_cat_list li .info h3 a:hover {color: #3DAAA8; text-decoration: none;}
+#recetas_cat_list li .info .chef {margin: 5px 0;}
+
+
+.counter .counter_number {
+    background: url("../media/bg-counter.jpg") no-repeat scroll left top transparent;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 100;
+    height: 36px;
+    padding: 5px 10px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 36px;
+}
+#recetas_cat_list .counter {float: left;margin-left: -60px;}
+.four.columns.alpha.omega #gAdd_block {margin-left: -5px !important;}
+#recetas_cat_list li {position: relative;}
+#recetas_cat_list .link_recetas {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+#page.recetas_landing h1 {font-size: 24px; font-weight: 100; margin-bottom: 8px;}
+#line_separetor_content .container .twelve.columns {width: 720px;}
 
 /* ****************************************************************************************************************
     MODALS
