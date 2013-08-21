@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>EnsuMesa</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+  	<link rel="stylesheet" href="includes/reset.css">
+  	<link rel="stylesheet" href="includes/skeleton.css">
+	<link rel="stylesheet" href="includes/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- JS
+	================================================== -->
+	<script src="includes/js/jquery-1.8.2.min.js"></script>
+	<script src="includes/js/modernizr-2.5.3.min.js"></script>
+
+	<script src="includes/js/jquery.flexslider-min.js"></script>
+	<script>
+		$(window).load(function(){
+		    // FLEXSLIDER ///////////////////////////////////////////////////////////
+		    $('#tienda_block_home .flexslider').flexslider({
+		      animation: "slide",  
+		      directionNav: true,
+		      prevText: "Previous",
+		      nextText: "Next",
+		      controlNav: false,
+		      slideshow: false, 
+		      controlsContainer: ".controls",
+		      start: function(slider) {
+		        slider.removeClass('loading');
+		      }
+		    });
+		    $('.flexslider.carrusel').flexslider({
+		    	animation: "slide",	
+		    	directionNav: true,
+				prevText: "Previous",
+				nextText: "Next",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false, 
+				itemMargin: 3,
+				itemWidth: 78,
+				minItems: 0,
+				maxItems: 3,
+				start: function(slider) {
+				  slider.removeClass('loading');
+				}
+		    });
+		});
+	</script>
+
+	<!-- SELECT SKIN -->
+	<script src="includes/js/select-skin/jquery.select_skin.js"></script>
+	<link rel="stylesheet" type="text/css" href="includes/js/select-skin/jquery.select_skin.css">
+	<script>
+		jQuery(document).ready(function() {
+		    jQuery("select").select_skin();
+		});
+	</script>
+
+	<!-- FANCYBOX -->
+	<script src="includes/js/fancybox/jquery.fancybox-1.3.4.js"></script>
+	<script src="includes/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script src="includes/js/fancybox/jquery.easing-1.3.pack.js"></script>
+	<script src="includes/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="includes/js/fancybox/jquery.fancybox-1.3.4.css">
+	<script>
+		jQuery(document).ready(function() {
+		    $(".targetModals").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'padding'			: 0,
+				'overlayColor'		: '#FFFFFF',
+				'overlayOpacity'	: 0.7
+			});
+		});
+	</script>
+
+	<!-- HOME SLIDER ACCORDION -->
+	<script src="includes/js/enquire.min.js"></script>
+	<script src="includes/js/jquery.zaccordion.min.js"></script>
+	
+	<!--[if IE ]>
+	<script>
+		$(document).ready(function() {
+			$("#home_gallery ul").zAccordion({
+				width: 900,
+				speed: 600,
+				slideClass: "slider",
+				slideWidth: 555,
+				height: 436,
+				auto: false,
+			});
+		});
+	</script>
+	<![endif]-->
+
+	<!--[if (gte IE 9)|!(IE)]><!-->
+	<script>
+		$(document).ready(function() {
+			var example = $('#home_gallery ul'), defaults = {
+				buildComplete: function () {
+					example.css('visibility', 'visible');
+				},
+				timeout: 5500
+			};
+			function build(x) {
+				var opts, current;
+				if (!$.isEmptyObject(example.data())) { /* If an zAccordion is found, rebuild it with new settings. */
+					example.css('visibility', 'hidden');
+					current = example.data('current');
+					opts = $.extend({
+						startingSlide: current
+					}, defaults, x);
+					example.zAccordion('destroy', {
+						removeStyleAttr: true,
+						removeClasses: true,
+						destroyComplete: {
+							afterDestroy: function() {
+								try {
+									console.log('zAccordion destroyed! Attempting to rebuild...');
+								} catch (e) {}
+							},
+							rebuild: opts
+						}
+					});
+				} else { /* If no zAccordion is found, build one from scratch. */
+					example.css('visibility', 'hidden');
+					opts = $.extend(defaults, x);
+					example.zAccordion(opts);
+				}
+			}
+			/* A unique Media Query is registered for each screen size. */
+			enquire.register('screen and (min-width: 960px)', { /* Standard screen sizes and a default build for browsers that are unsupported. */
+				match : function () {
+					build({
+						width: 900,
+						speed: 600,
+						slideClass: "slider",
+						slideWidth: 555,
+						height: 436,
+						auto: false,
+					});
+				} /* The *true* value below means this media query will fire by default. */
+			}, true).register('screen and (min-width: 768px) and (max-width: 959px)', {
+				match : function () {
+					build({
+						speed: 600,
+						slideWidth: 420,
+						width: 705,
+						height: 330,
+						slideClass: "slider",
+						auto: false,
+					});
+				}
+			}).register('screen and (min-width: 480px) and (max-width: 767px)', {
+				match : function () {
+					build({
+						slideWidth: 220,
+						width: 380,
+						height: 200
+					});
+				}
+			}).register('screen and (max-width: 479px)', {
+				match : function () {
+					if (!$.isEmptyObject(example.data())) {
+						example.zAccordion('destroy', {
+							removeStyleAttr: true,
+							removeClasses: true,
+							destroyComplete: {
+								afterDestroy: function() {
+									try {
+										console.log('zAccordion destroyed!');
+									} catch (e) {}
+								}
+							}
+						});
+					}
+				}
+			});
+		});
+	</script>
+	<!--<![endif]-->
+
+	<!-- JQUERY UI -->
+	<script src="includes/js/jquery_ui/jquery-ui-1.10.3.custom.min.js"></script>
+	<!-- <link href="includes/js/jquery_ui/css/humanity/jquery-ui-1.10.3.custom.css" rel="stylesheet"> -->
+	<script>
+		$(function() {
+			$( "#tabs" ).tabs();
+		});
+	</script>
+
+
+	<script src="includes/js/functions.js"></script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="media/templates/favicon.ico">
+	<link rel="apple-touch-icon" href="media/templates/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="media/templates/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="media/templates/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+	<div id="page" class="home">
+		<header>
+			<div class="container">
+				<h1 class="logo five columns">
+					<a href="">
+						<img src="media/logo_ensumesa.png">
+					</a>
+				</h1>
+
+				<div class="social_module">
+					<img src="media/fpo-social-header.png">
+				</div>
+
+				<div class="login_cart_module">
+					<ul>
+						<li><a href="">Ingresar</a> /</li>
+						<li><a href="">Registrarse</a> /</li>
+						<li>
+							<div class="cart_block">
+								<div class="cart"><span>20</span></div>
+								<div class="cart_summary">
+									<h2>Pedido</h2>
+									<ul>
+										<li>
+											<a class="img_link" href=""><img width="56" src="media/img-thumb-product.png"></a>
+											<div class="info">
+												<h4><a href="">Nombre del producto mas largo</a></h4>
+												<h5>Categoría</h5>
+												<p class="price">$ XXX.XXX.XXX</p>
+												<a class="delete" href="">X</a>
+											</div>
+										</li>
+										<li>
+											<a class="img_link" href=""><img width="56" src="media/img-thumb-product.png"></a>
+											<div class="info">
+												<h4><a href="">Nombre del producto</a></h4>
+												<h5>Categoría</h5>
+												<p class="price">$ XXX.XXX.XXX</p>
+												<a class="delete" href="">X</a>
+											</div>
+										</li>
+									</ul>
+									<div class="botones">
+										<a class="close" href="">Cerrar</a>
+										<a class="btn" href="">Ir a pagar</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="search_module">
+					<div class="form">
+						<select>
+							<option>Buscar</option>
+							<option>Todo</option>
+							<option>Recetas</option>
+							<option>Expertos</option>
+							<option>Ingredientes</option>
+							<option>Técnicas de cocina</option>
+							<option>Glosario</option>
+							<option>Blog</option>
+							<option>Comunidad</option>
+							<option>Fanáticos del sabor</option>
+							<option>Tienda</option>
+						</select>
+
+						<input type="text">
+						<input type="submit" value="search">
+					</div>
+					<p><a class="targetModals" href="#search_advance">Búsqueda avanzada de recetas</a></p>
+				</div>
+			</div>
+		</header>
+		<nav class="main_nav">
+			<div class="container">
+				<ul>
+					<li>
+						<a class="menu" href="">Recetas</a>
+						<div class="level-2">
+							<ul>
+								<li><h3><a href="">cocinas del mundo</a></h3></li>
+								<li><a href="">americana</a></li>
+								<li><a href="">árabe</a></li>
+								<li><a href="">caribe</a></li>
+								<li><a href="">colombiana</a></li>
+								<li><a href="">española</a></li>
+								<li><a href="">francesa</a></li>
+								<li><a href="">india</a></li>
+								<li><a href="">italiana</a></li>
+								<li><a href="">mediterránea</a></li>
+								<li><a href="">mexicana</a></li>
+								<li><a href="">oriental</a></li>
+								<li><a href="">peruana</a></li>
+							</ul>
+							<ul>
+								<li><h3><a href="">tipo de plato</a></h3></li>
+								<li><a href="">primer plato</a></li>
+								<li><a href="">Plato fuerte</a></li>
+								<li><a href="">guarniciones</a></li>
+								<li><a href="">postre</a></li>
+								<li><a href="">pasabocas</a></li>
+							</ul>
+							<ul>
+								<li><h3><a href="">ocasiones</a></h3></li>
+								<li><a href="">desayunos</a></li>
+								<li><a href="">parrilla</a></li>
+								<li><a href="">lonchera</a></li>
+								<li><a href="">comida navideña</a></li>
+								<li><a href="">recetas de halloween</a></li>
+								<li><a href="">la hora del té</a></li>
+								<li><a href="">celebraciones</a></li>
+								<li><a href="">recetas infantiles</a></li>
+							</ul>
+							<ul>
+								<li><h3><a href="">preparación</a></h3></li>
+								<li><a href="">bebidas</a></li>
+								<li><a href="">cocteles</a></li>
+								<li><a href="">sopas</a></li>
+								<li><a href="">ensaladas</a></li>
+								<li><a href="">pastas</a></li>
+								<li><a href="">salsas</a></li>
+								<li><a href="">vinagretas y aderezos</a></li>
+								<li><a href="">panadería</a></li>
+								<li><a href="">repostería</a></li>
+								<li><a href="">pastelería</a></li>
+								<li><a href="">arroz</a></li>
+							</ul>
+							<ul class="last">
+								<li><h3><a href="">Estilo de vida</a></h3></li>
+								<li><a href="">recetas vegetarianas</a></li>
+								<li><a href="">recetas fáciles</a></li>
+								<li><a href="">recetas saludables</a></li>
+								<li><a href="">Recetas creativas</a></li>
+								<li class="last"><h3><a href="">sugerencias de temporada</a></h3></li>
+							</ul>
+						</div>
+					</li>
+					<li><a class="menu" href="">Expertos</a></li>
+					<li>
+						<a class="menu" href="">Aprenda <br> y cocine</a>
+						<div class="level-2">
+							<ul>
+								<li><h3><a href="">ingredientes</a></h3></li>
+							</ul>
+							<ul>
+								<li><h3><a href="">técnicas de cocina</a></h3></li>
+							</ul>
+							<ul>
+								<li><h3><a href="">glosario</a></h3></li>
+							</ul>
+						</div>
+					</li>
+					<li><a class="menu" href="">Comunidad</a></li>
+					<li><a class="menu" href="">fanáticos <br> del sabor</a></li>
+					<li><a class="menu" href="">Blog</a></li>
+					<li><a class="menu" href="">Tienda</a></li>
+				</ul>
+			</div>
+		</nav>
+		<section id="breadcrumb">
+			<div class="container">
+				<ul>
+					<li class="first"><a class="home" href="">Inicio</a></li>
+					<li><a href="">Recetas</a></li>
+					<li class="last">Nombre de esta receta</li>
+				</ul>
+			</div>
+		</section>
+
+		<div class="page_content container">
+
+			<!--COLUMAN IZQUIERDA -->
+			<div class="two-thirds column">
+
+				<section id="recetas_detail_intro" class="clearfix">
+					<img src="media/img-recetas-landing.jpg" alt="Título de la receta" class="foto_principal">
+					<div class="four columns alpha omega">
+						<div class="receta_stats">
+							<div href="#" id="convertidor">
+								<a href="#">Convertidor de medidas</a>
+							</div>
+
+							<ul>
+								<li class="porciones">
+									<span class="valor">8</span>
+									Porciones:
+								</li>
+								<li class="preparacion">
+									<span class="valor">8</span>
+									T. de preparación:
+								</li>
+								<li class="coccion">
+									<span class="valor">8</span>
+									T. de cocción:
+								</li>
+								<li class="dificultad">
+									<span class="valor">8</span>
+									Nivel de dificultad:
+								</li>
+								<li class="calificar">
+									<div class="valor">
+										<a href="#" class="cinco">&nbsp;</a>
+										<a href="#" class="cuatro">&nbsp;</a>
+										<a href="#" class="tres">&nbsp;</a>
+										<a href="#" class="dos">&nbsp;</a>
+										<a href="#" class="una">&nbsp;</a>
+										<div class="calificacion" style="width:50%">
+										</div>
+									</div>
+									Calificar:
+								</li>
+							</ul>
+
+							<div class="imprimir">
+								<a href="#"><img src="media/ico-mail.png" /></a>
+								<a href="#"><img src="media/ico-print.png" /></a>
+							</div>
+
+							<div class="opciones_usuario">
+								<a href="#">Guardar esta receta a Mi cuaderno de cocina</a>
+								<img src="media/banderita.png" />
+							</div>
+
+							<div class="opciones_usuario">
+								<a href="#">Guardar esta receta a Mi cuaderno de cocina</a>
+								<img src="media/banderita.png" />
+							</div>
+
+							<div class="opciones_usuario">
+								<a href="#">Guardar esta receta a Mi cuaderno de cocina</a>
+								<img src="media/banderita.png" />
+							</div>
+
+						</div>
+					</div>
+
+				</section>	
+
+				<div class="four columns alpha omega">
+				purrundun
+				</div>
+
+				<div class="seven columns alpha omega">
+					<article class="texto">
+						<h1>Tournedos a la pimienta con romero y papitas salteadas
+						<span class="chef">Chef: <a href="#">Juan Fernando Herran</a></span>
+						</h1>
+
+						<p>Lorem ipsum dolor sit amet felis varius magna Cras sodales fames. Volutpat. Pretium. Senectus! Ultrices ultrices, rhoncus! Eleifend eget! Wisi natoque lorem nonummy aptent Pellentesque id litora auctor! Cras. Lacus sed. </p>
+
+						<iframe width="400" height="225" src="http://www.youtube.com/embed/_X4FCyI1SlM" frameborder="0" allowfullscreen></iframe>
+
+						<div class="separador">
+							<h2>Ingredientes</h2>
+							<h3>Hogao</h3>
+							<ul>
+								<li>3 cucharadas de aceite vegetal</li>
+								<li>1 ½ tazas de cebolla larga cortada en tiras delgadas</li>
+								<li>1 lb de tomates sin piel ni semillas, cortados en cubos</li>
+								<li>½ taza de leche</li>
+								<li>½ lb de queso Paipa rallado</li>
+								<li>Una pizca de comino</li> 
+								<li>Sal y pimienta al gusto</li>
+							</ul>
+							<h3>Puchero</h3>
+							<ul>
+								<li>3 cucharadas de aceite vegetal</li>
+								<li>1 ½ tazas de cebolla larga cortada en tiras delgadas</li>
+								<li>1 lb de tomates sin piel ni semillas, cortados en cubos</li>
+								<li>½ taza de leche</li>
+								<li>½ lb de queso Paipa rallado</li>
+								<li>Una pizca de comino</li> 
+								<li>Sal y pimienta al gusto</li>
+							</ul>
+						</div>
+
+						<div class="separador">
+							<h2>Preparación</h2>
+							<ol>
+								<li>Para el hogao, caliente el aceite en una sartén a fuego medio y añada la cebolla larga, el tomate y la leche. Cuando comience a hervir, agregue el queso, la sal, la pimienta y el comino. Cocine hasta que el queso se haya integrado por completo a la salsa.</li>
+								<li>Corte las carnes y la longaniza en trozos medianos.</li>
+								<li>Aparte, en una olla profunda vierta ocho tazas de agua y cocine el pollo, la costilla, la carne curada, el lomo ancho y el tocino junto con la cebolla larga, el ajo, el laurel y el tomillo. Asegúrese de que el agua cubra totalmente las carnes y adicione sal y pimienta al gusto. Cocine durante 1 hora y 30 minutos, a fuego medio, o hasta que las carnes estén totalmente cocidas. Si es necesario añada más agua a la cocción.</li>
+								<li>Retire las carnes del caldo, incorpore el cerdo, la longaniza, la mazorca y el plátano verde. Cocine por 15 minutos más. Agregue la papa, la yuca, la ahuyama, la arracacha y el repollo. Continúe cocinando por 20 minutos con la olla tapada, cuidando el punto de cocción de cada ingrediente. Rectifique la sazón.</li>
+								<li>Agregue el plátano maduro 15 minutos antes de terminar la cocción. Añada a la preparación el pollo, la costilla, la carne curada, el lomo ancho y el tocino para calentarlos.</li>
+								<li>Sirva las carnes en una bandeja con los demás acompañantes y bañe con el hogao. En un plato aparte sirva el caldo caliente; acompañe.</li>
+							</ol>
+						</div>
+
+					</article>
+
+				</div>
+
+
+			</div>
+			
+			<!--COLUMAN DERECHA -->
+			<div class="one-third column">
+				<div id="gAdd_block">Google Ads</div>
+
+				<div id="recetas_destacadas" class="block">
+					<h2>Recetas <b>destacadas</b></h2>
+					<div id="tabs">
+					  <ul>
+					    <li><a href="#tabs-1">Recientes</a></li>
+					    <li><a href="#tabs-2">+ Calificadas</a></li>
+					    <li class="last"><a href="#tabs-3">+ Compartidas</a></li>
+					  </ul>
+					  <div id="tabs-1">
+					    <ul>
+					    	<li>
+					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+					    		<div class="info">
+					    			<p><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+					    		</div>
+					    	</li>
+					    	<li class="last">
+					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+					    		<div class="info">
+					    			<p><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+					    		</div>
+					    	</li>
+					    </ul>
+					  </div>
+					  <div id="tabs-2">
+					    <ul>
+					    	<li>
+					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+					    		<div class="info">
+					    			<p><a href="">CALIFICADAS dolor sit amet, consectetur adipisicing elit</a></p>
+					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+					    		</div>
+					    	</li>
+					    	<li class="last">
+					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+					    		<div class="info">
+					    			<p><a href="">CALIFICADAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+					    		</div>
+					    	</li>
+					    </ul>
+					  </div>
+					  <div id="tabs-3">
+					    <ul>
+					    	<li>
+					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+					    		<div class="info">
+					    			<p><a href="">COMPARTIDAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+					    		</div>
+					    	</li>
+					    	<li class="last">
+					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
+					    		<div class="info">
+					    			<p><a href="">COMPARTIDAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
+					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+					    		</div>
+					    	</li>
+					    </ul>
+					  </div>
+					</div>
+				</div>
+
+				<div id="coleccion_destacada" class="block border_top_none">
+					<h2>Colección <b>destacada</b></h2>
+					<div class="rating">
+						<img src="media/fpo-star-raiting.png">
+					</div>
+					<div class="img_cont">
+						<img class="img_thumbBig" src="media/fpo-img-receta-thumb.jpg">
+						<img class="img_thumbSmall" src="media/fpo-img-receta-thumb.jpg">
+						<img class="img_thumbSmall" src="media/fpo-img-receta-thumb.jpg">
+						<img class="img_thumbSmall" src="media/fpo-img-receta-thumb.jpg">
+						<img class="img_thumbSmall" src="media/fpo-img-receta-thumb.jpg">
+					</div>
+					<h3>Fin de semana en la finca</h3>
+					<p class="autor">Por: <a href="">Juan Fernando Herran</a></p>
+				</div>
+
+				<div class="block border_top_none borderNone">
+					<h2>Técnica <b>destacada</b></h2>
+					<img src="media/img-video.jpg">
+					<p><a href="">Lorem ipsum dolor sit amet felis varius magna</a></p>
+				</div>
+			</div>
+
+		</div>
+
+
+		</div>
+		
+		<section id="social_module">
+			<div class="container">
+				<h2>Haga parte de nuestra comunidad de amigos de la cocina</h2>
+				<div class="facebook block">
+					<h3>Facebook</h3>
+				</div>
+				<div class="twitter block">
+					<h3>Twitter</h3>
+				</div>
+				<div class="pinterest block">
+					<h3>Pinterest</h3>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="container">
+				<div class="tablet_Row">
+					<ul class="first">
+						<li><h1><img alt="ensuMesa" src="media/logo-ensumesa-footer.png"></h1></li>
+						<li class="copyright">2013 © ensumesa.com</li>
+						<li><a href="">Términos & Condiciones</a></li>
+						<li><a href="">Políticas de Privacidad</a></li>
+					</ul>
+					<ul>
+						<li><h3>Aprender</h3></li>
+						<li><a href="#">Expertos</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Fanáticos del sabor</a></li>
+					</ul>
+					<ul>
+						<li><h3>Cocinar</h3></li>
+						<li><a href="#">Recetas</a></li>
+						<li><a href="#">Ingredientes</a></li>
+						<li><a href="#">Técnicas</a></li>
+						<li><a href="#">Glosario</a></li>
+					</ul>
+					<ul>
+						<li><h3>Interactuar</h3></li>
+						<li><a href="#">Mi cuaderno de cocina</a></li>
+						<li><a href="#">Mis menús</a></li>
+						<li><a href="#">Mis colecciones</a></li>
+						<li><a href="#">Foro</a></li>
+					</ul>
+				</div>
+				<div class="tablet_Row">
+					<ul class="social_module">
+						<li><a class="facebook" href="#">facebook</a></li>
+						<li><a class="twitter" href="#">twitter</a></li>
+						<li><a class="pinterest" href="#">pinterest</a></li>
+						<li><a class="youtube" href="#">you tube</a></li>
+						<li><a class="instagram" href="#">instagram</a></li>
+					</ul>
+					<div class="newsletter_block">
+						<h4>Reciba nuestro Newsletter</h4>
+						<input type="email" placeholder="email@email.com"> <input class="btn" type="submit" value="suscribir">
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div id="modals_content">
+			<div id="search_advance" class="">
+				<input type="text" placeholder="Liste dos o tres ingredientes, el nombre de la receta o el tipo de preparación">
+				<h2>Opciones para búsqueda avanzada de recetas</h2>
+				<div class="block">
+					<h4>Tipo de Plato</h4>
+					<table>
+						<tr>
+							<td>
+								<input id="check_01" class="checkSkin" type="checkbox" value="1" name="check_01">
+								<label for="check_01">Opción</label>
+								<label class="checkSkin" for="check_01">Primer Plato (34)</label>
+							</td>
+							<td>
+								<input id="check_02" class="checkSkin" type="checkbox" value="1" name="check_02">
+								<label for="check_02">Opción</label>
+								<label class="checkSkin" for="check_02">Plato Fuerte (45)</label>
+							</td>
+							<td>
+								<input id="check_03" class="checkSkin" type="checkbox" value="1" name="check_03">
+								<label for="check_03">Opción</label>
+								<label class="checkSkin" for="check_03">Guarniciones (98)</label>
+							</td>
+							<td>
+								<input id="check_04" class="checkSkin" type="checkbox" value="1" name="check_04">
+								<label for="check_04">Opción</label>
+								<label class="checkSkin" for="check_04">Postre (37)</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input id="check_05" class="checkSkin" type="checkbox" value="1" name="check_05">
+								<label for="check_05">Opción</label>
+								<label class="checkSkin" for="check_05">Pasabocas (78)</label>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<div class="block">
+					<h4>Estilos de vida</h4>
+					<table>
+						<tr>
+							<td>
+								<input id="check_06" class="checkSkin" type="checkbox" value="1" name="check_06">
+								<label for="check_06">Opción</label>
+								<label class="checkSkin" for="check_06">Recetas vegetarianas (34)</label>
+							</td>
+							<td>
+								<input id="check_07" class="checkSkin" type="checkbox" value="1" name="check_07">
+								<label for="check_07">Opción</label>
+								<label class="checkSkin" for="check_07">Recetas fáciles (45)</label>
+							</td>
+							<td>
+								<input id="check_08" class="checkSkin" type="checkbox" value="1" name="check_08">
+								<label for="check_08">Opción</label>
+								<label class="checkSkin" for="check_08">Recetas saludables (98)</label>
+							</td>
+							<td>
+								<input id="check_09" class="checkSkin" type="checkbox" value="1" name="check_09">
+								<label for="check_09">Opción</label>
+								<label class="checkSkin" for="check_09">Recetas creativas (37)</label>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="block last">
+					<table>
+						<tr>
+							<td>
+								<label>Cocinas del mundo</label>
+								<select>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+								</select>
+							</td>
+							<td>
+								<label>Ocasiones</label>
+								<select>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+								</select>
+							</td>
+							<td>
+								<label>Preparación</label>
+								<select>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+								</select>
+							</td>
+							<td>
+								<label>Sugerencias de temporada</label>
+								<select>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+									<option>Todas</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<p><input type="submit" class="btn" value="Buscar"></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
