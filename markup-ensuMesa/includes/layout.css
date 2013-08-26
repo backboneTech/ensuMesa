@@ -40,7 +40,7 @@ h2 {
 }
 h2 b {font-weight: 700;}
 
-a {color: #3DAAA8; text-decoration: none;}
+a {color: #555; text-decoration: none;}
 a:hover {text-decoration: underline; color: #3DAAA8;}
 img {
     border: 0 none;
@@ -68,6 +68,7 @@ input[placeholder] {color: #999999;}
 }
 
 .chef, .author {font-size: 11px;}
+.chef a, .author a{ color: #3DAAA8; }
 .text_center {text-align: center;}
 .border_top_none  {border-top: none !important;}
 .floatLeft {float: left !important;}
@@ -377,8 +378,9 @@ nav.main_nav ul li:nth-child(n+2) .level-2 {width:685px;}
 /* ****************************************************************************************************************
     FOOTER
 **************************************************************************************************************** */
-footer {padding: 30px 0; border-top: 1px solid #CCCCCC; }
-#page.home footer {border-top:none;}
+footer {}
+footer .container{border-top: 1px solid #CCCCCC; padding: 30px 0; }
+#page.home footer .container {border-top:none;}
 footer ul {float: left; margin: 0 36px;}
 footer ul li {margin-bottom: 7px;}
 footer ul li h3 {font-size: 16px; font-weight: 100;}
@@ -503,18 +505,16 @@ footer .tablet_Row {
     BLOCK FANATICOS DEL SABOR
 **************************************************************************************************************** */
 #promo_fanaticos {
-    background: url(../media/bg-promo-fanaticos.png) repeat-y left top;
+    background-image: url(../media/bg-promo-fanaticos.png);
     padding: 10px 7px;
-    width: 266px;
 }
+#promo_fanaticos img{ width: 99.9%;}
 #promo_fanaticos li {display: none;}
-#promo_fanaticos article {width: 266px;}
 #promo_fanaticos .header {
     background-color: #3D312A;
     color: #FFFFFF;
     text-align: center;
     padding: 10px;
-    width: 244px;
 }
 #promo_fanaticos .header h3 {
     background: url("../media/misc-title-line.png") repeat-x scroll center bottom transparent;
@@ -551,7 +551,7 @@ footer .tablet_Row {
 #home_blocks .block .img_cont,
 .block .img_cont {overflow: hidden; position: relative;}
 
-#home_blocks .columns {width: 31%;}
+#home_blocks .columns {width: 31.5%;}
 /*#home_blocks*/ .block {
     position: relative;
     border-top: 1px solid #CCCCCC ;
@@ -823,23 +823,26 @@ footer .tablet_Row {
         .maridaje img{ float: right; margin: 5px 2px 5px 10px; }
         .maridaje h2{ margin-top: 10px; font-family: 'merriweather'; font-size: 16px; }
 
-    .tips_ingredientes{ border: solid 1px #CCC; border-top: solid 4px #624c3d; width: 185px; background-color: #efe9e2;}
+    .tips_ingredientes{ border: solid 1px #CCC; border-top: solid 4px #624c3d; border-bottom: none; width: 185px; background-color: #efe9e2;}
         .foto_tip_hold{ position: relative;}
+        .foto_tip_hold img{ display: block;}
         .foto_tip_ingrediente{ display: block;}
         .foto_tip_hold .marca{ position: absolute; bottom: -10px; right: 10px;}
-        .tips_ingredientes h2{ display: block; font-size: 13px; background-color: #FFF; padding: 8px 50px 8px 8px;}
-        .tips_ingredientes ul{ border-bottom: solid 1px #CCC;}
-        .tips_ingredientes li{ display: block; padding: 10px; font-size: 12px; background-color: #f7f3ef; border-top:solid 1px #CCC;}
+        .tips_ingredientes h2{ display: block; font-size: 13px; background-color: #FFF; padding: 8px 50px 8px 8px; border-bottom: solid 1px #CCC;}
+        .tips_ingredientes ul{ display: none;}
+        .tips_ingredientes li{ display: block; padding: 10px; font-size: 12px; background-color: #f7f3ef; border-bottom:solid 1px #CCC;}
         .tips_ingredientes h3{ font-weight: bold; margin-bottom: .5em; }
         .tips_intro{ text-align: center;}
         .tips_intro img{ width: 66%; margin-top: 15px;}
         .tips_intro p{ display: block; padding: 15px 20px;}
 
-#recetas_relacionadas{ border: solid 1px #CCC; border-width: 1px 0; padding: 20px 0; clear: both;}
-    #recetas_relacionadas h2{ }
-    #recetas_relacionadas ul{ display: block;}
-    #recetas_relacionadas li{ display: inline-block; width:118px;  margin: 0 15px;}
-    #recetas_relacionadas p a{ color: #666;}
+.relacionadas{ border-top: solid 1px #CCC; padding: 15px 0; clear: both;}
+    .relacionadas h2{ font-weight: bold; margin-bottom: 20px;}
+    .recetas_relacionadas{ display: block; text-align: center;}
+    .recetas_relacionadas li{ display: inline-block; width:118px;  margin: 0 15px; text-align: left;}
+    .tecnicas_relacionadas{ padding-left: 40px;}
+    .tecnicas_relacionadas li{ margin: 0 0 15px;}
+    
 
 
 /*Este debería ser general para todos los cuerpos de texto*/
@@ -852,7 +855,18 @@ footer .tablet_Row {
     .texto .separador{ border-top: solid 1px #CCC; padding-top: 10px;}
     .texto ol{ margin-left: 20px;}
 
-
+/*Comentarios*/
+.foto_usuario{ float: left; margin-right: 10px;}
+    .comentar{ border:solid 1px #CCC; position: relative; text-align: right;}
+    .comentar img{ position: absolute; top: 10px; left: -11px;}
+    .comentar textarea{ display: block; width: 94%; border: none; padding: 10px 3%; height: 90px; color: #666;}
+    .comentar input.btn{ height: auto; margin: 5px 10px;}
+    .comentario{ border-top:solid 1px #CCC; clear: both; padding: 15px 0 0; margin-right: 30px;}
+    .comentario .comentario{border-top:dotted 1px #CCC;}
+    .over_comentario{ position: relative; cursor: pointer;}
+    .over_comentario .btns_responder{ display:none; background-color: rgba(255,255,255,.9); position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+    .over_comentario .btns_responder div{ position: absolute; top: 50%; margin-top: -18px; left: 0; right: 0; text-align: center; }
+    .over_comentario:hover .btns_responder{ display: block;}
 
 
 
@@ -925,6 +939,15 @@ footer .tablet_Row {
 
     /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
     @media only screen and (max-width: 479px) {}
+
+
+/* ****************************************************************************************************************
+    FANCY TRANSITIONS CSS3
+******************************************************************************************************************* */
+
+    a{ transition: background-color 1s, color .5s;}
+    .btn{ transition: all .8s;}
+
 
 /* ****************************************************************************************************************
     FLEXSLIDER PLUGIN STYLES
