@@ -76,6 +76,7 @@ input[placeholder] {color: #999999;}
 .borderNone {border: none !important}
 .img_thumbBig {width: 135px;}
 .img_thumbSmall {width: 64px;}
+.page_content {margin-bottom: 20px;}
 /* ****************************************************************************************************************
     estilos con posibles cambios de temas (colores)
 **************************************************************************************************************** */
@@ -837,7 +838,7 @@ footer .tablet_Row {
         .tips_intro p{ display: block; padding: 15px 20px;}
 
 .relacionadas{ border-top: solid 1px #CCC; padding: 15px 0; clear: both;}
-    .relacionadas h2{ font-weight: bold; margin-bottom: 20px;}
+    .relacionadas h2{ font-weight: 600; margin-bottom: 20px;}
     .recetas_relacionadas{ display: block; text-align: center;}
     .recetas_relacionadas li{ display: inline-block; width:118px;  margin: 0 15px; text-align: left;}
     .tecnicas_relacionadas{ padding-left: 40px;}
@@ -846,7 +847,7 @@ footer .tablet_Row {
 
 
 /*Este debería ser general para todos los cuerpos de texto*/
-.texto{}
+.texto{margin-bottom: 30px;}
     .texto .chef{ display: block; margin-top: 5px; font-family: 'Roboto'}
     .texto h1{ margin-bottom: 20px;}
     .texto p, .texto iframe, .texto video, .texto ul{ margin-bottom: 15px;}
@@ -868,8 +869,19 @@ footer .tablet_Row {
     .over_comentario .btns_responder div{ position: absolute; top: 50%; margin-top: -18px; left: 0; right: 0; text-align: center; }
     .over_comentario:hover .btns_responder{ display: block;}
 
+/* ****************************************************************************************************************
+    PAGE :: INGREDIENTES LANDING
+******************************************************************************************************************* */
+#page.ingredientes_detail {}
+#page.ingredientes_detail h1 a {
+    font-family: 'roboto';
+    font-size: 12px;
+}
+#page.ingredientes_detail .otros_terminos {background-color: #EFE9E2 ; color: #666666; padding: 10px; margin: 7px 0 1px;}
 
-
+#page.ingredientes_detail .line_break {border-bottom: 1px solid #CCCCCC; height: 5px; margin: 7px 0;}
+#page.ingredientes_detail .description {margin-bottom: 40px;}
+#page.ingredientes_detail .description h3 {font-size: 16px; color: #3D312A; margin-bottom: 8px;}
 
 /* ****************************************************************************************************************
     MODALS
