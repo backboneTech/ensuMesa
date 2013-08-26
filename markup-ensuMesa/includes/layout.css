@@ -904,6 +904,67 @@ footer .tablet_Row {
     .cargarmas img{ margin-right: 10px;}
 
 /* ****************************************************************************************************************
+    PAGE :: SEARCH RESULTS
+******************************************************************************************************************* */
+#page.search_results {}
+#page.search_results .recetas_block.results .post {margin-bottom: 20px; margin-right: 20px;}
+#page.search_results .recetas_block.results .post.last {margin-right: 0;}
+#page.search_results .recetas_block.results .post .description {margin: 6px 0;}
+
+#page.search_results .results {
+    border-top: 1px solid #CCCCCC;
+    clear: both;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 10px;
+    position: relative;
+}
+#page.search_results .results  h2 {
+    margin-bottom: 10px;
+}
+#page.search_results .recetas_block.results  h2 {
+    margin-bottom: 10px;
+    font-family: 'merriweather';
+    font-size: 24px;
+}
+#page.search_results .recetas_block.results h2 a {
+    float: right;
+    font-family: 'roboto';
+    font-size: 13px;
+    margin-right: 5px;
+    margin-top: 7px;
+}
+#page.search_results .counter {
+    float: left;
+    margin-left: -60px;
+    margin-top: -40px;
+}
+#page.search_results .recetas_block.results .counter{margin-top: -45px;}
+#page.search_results .results .post {overflow: hidden; margin-bottom: 20px;}
+#page.search_results .results .post .img_cont {float: left;}
+#page.search_results .results .post .img_cont img {width: 98px;}
+#page.search_results .results .post .descriptions {margin-left: 110px;}
+#page.search_results .results .post .descriptions h4 {font-weight: 600; font-size: 14px; margin-bottom: 7px;}
+
+.search_filter_block {margin-bottom: 30px;}
+.search_filter_block h2 {font-size: 16px; font-weight: 600; margin-bottom: 7px;}
+.search_filter_block .accordion {}
+.search_filter_block .accordion h3 {
+    cursor: pointer;
+    background: url(../media/icn-accordion-more.png) no-repeat right center;
+    text-transform: uppercase;
+    border-top: 1px solid #CCCCCC;
+    /*border-bottom: 1px solid #CCCCCC;*/
+    padding: 4px 0;
+    /*margin-bottom: 7px;*/
+}
+.search_filter_block .accordion h3.ui-accordion-header-active {
+    background: url(../media/icn-accordion-less.png) no-repeat right center;
+    margin-bottom: 7px;   
+    border-bottom: 1px solid #CCCCCC;
+}
+.search_filter_block .accordion h3.last {border-bottom: 1px solid #CCCCCC;}
+/* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
 #modals_content {display: none;}

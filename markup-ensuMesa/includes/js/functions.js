@@ -44,6 +44,10 @@ $(document).ready(function(){
         var randomitem = list[randomnum];
         $(randomitem).css("display", "block");
 
+      // SEARCH RESULTS ADD CLASS TO COLUMNS
+      $('.results_content .post.three.columns:nth-child(3n)').addClass('last');
+      
+
 });
 $(window).load(function(){ 
     // executes when complete page is fully loaded, including all frames, objects and images
