@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>EnsuMesa</title>
+	<title>EnsuMesa :: Recetas : Nombre de la receta</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -394,7 +394,7 @@
 		</section>
 
 		<div class="page_content container">
-
+		<div class="row">
 			<!--COLUMAN IZQUIERDA -->
 			<div class="two-thirds column alpha">
 
@@ -512,10 +512,10 @@ Lorem ipsum dolor sit amet felis varius magna Cras sodales fames.</p>
 
 							<div class="tip_ingrediente">
 								<div class="foto_tip_hold">
-									<img class="foto_tip_ingrediente" src="media/samples/salchichas.jpg" />
+									<a href="#"><img class="foto_tip_ingrediente" src="media/samples/salchichas.jpg" /></a>
 									<img src="media/samples/logo-zenu.png" class="marca" />
 								</div>
-								<h2>MANTEQUILLA ALPINA</h2>
+								<h2><a href="#">MANTEQUILLA ALPINA</a></h2>
 								<ul>
 									<li>
 										<h3>Conservación</h3>
@@ -537,10 +537,10 @@ Lorem ipsum dolor sit amet felis varius magna Cras sodales fames.</p>
 
 							<div class="tip_ingrediente">
 								<div class="foto_tip_hold">
-									<img class="foto_tip_ingrediente" src="media/samples/salchichas.jpg" />
+									<a href="#"><img class="foto_tip_ingrediente" src="media/samples/salchichas.jpg" /></a>
 									<img src="media/samples/logo-doria.png" class="marca" />
 								</div>
-								<h2>MANTEQUILLA ALPINA</h2>
+								<h2><a href="#">MANTEQUILLA ALPINA</a></h2>
 								<ul>
 									<li>
 										<h3>Conservación</h3>
@@ -746,11 +746,10 @@ Lorem ipsum dolor sit amet felis varius magna Cras sodales fames.</p>
 					</div>
 
 				</div>
-
-
-				<div id="recetas_relacionadas">
+				</div>
+				<div class="relacionadas">
 					<h2>Recetas relacionadas</h2>
-					<ul>
+					<ul class="recetas_relacionadas">
 						<li>
 							<img src="media/samples/relacionada1.jpg" title="titulo de la receta" />
 							<p><a href="#">Lorem ipsum dolor sit ame, consectetur adipisicing elit</a></p>
@@ -784,54 +783,93 @@ Lorem ipsum dolor sit amet felis varius magna Cras sodales fames.</p>
 					</ul>
 				</div>
 
-				<div id="tecnicas_relacionadas">
-					<h2>Recetas relacionadas</h2>
-					<ul>
-						<li></li>
+				<div class="relacionadas">
+					<h2>Técnicas relacionadas</h2>
+					<ul class="tecnicas_relacionadas">
+						<li><a href="#">Lorem ipsum dolor sit amet felis varius magna Cras sodales fames. Volutpat. Pretium. </a></li>
+						<li><a href="#">Lorem ipsum dolor sit amet felis varius magna Cras sodales fames. Volutpat. Pretium. </a></li>
+						<li><a href="#">Lorem ipsum dolor sit amet felis varius magna Cras sodales fames. Volutpat. Pretium. </a></li>
 					</ul>
 				</div>
 
-				<div id="comentarios">
+				<div id="comentarios" class="relacionadas row">
 					<h2>346 usuarios están hablando de esta receta</h2>
-					<div class="eleven columns offset-by-one ">
-						<form>
-							<img class="foto_usuario" src="#" />
-							<div class="ten columns comentar">
-								<img src="media/bocadillo.png" />
-								<textarea>Y tú, qué opinas?</textarea>
-								<input type="button" value="publicar" />
+					<div class="twelve columns offset-by-one ">
+
+						<form class="row">
+							<img class="foto_usuario" src="media/samples/usuario.jpg" />
+							<div class="ten columns">
+								<div class="comentar">
+									<img src="media/comment-point.png" />
+									<textarea>Y tú ¿Qué opinas?</textarea>
+									<input type="button" class="btn" value="publicar" />
+								</div>
 							</div>
 						</form>
-						<div class="comentario">
-							<img class="foto_usuario" src="#" />
-							<div class="ten columns">
-								<h3><a href="#">Nombre de Usuario</a></h3>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi con el lorem ipsum con dolor sit amet fin del lorem ipsum de ejemplo.</p>
 
-								<div class="comentario">
-									<img class="foto_usuario" src="#" />
-									<div class="seven columns">
-										<h3><a href="#">Nombre de Usuario</a></h3>
-										<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi con el lorem ipsum con dolor sit amet fin del lorem ipsum de ejemplo.</p>
+						<div class="comentario">
+							<img class="foto_usuario" src="media/samples/usuario.jpg" />
+							<div class="ten columns texto">
+								<h3><a href="#">Nombre de Usuario</a></h3>
+								<div class="over_comentario">
+									<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi con el lorem ipsum con dolor sit amet fin del lorem ipsum de ejemplo.</p>
+								
+
+									<div class="comentario">
+
+										<img class="foto_usuario" src="media/samples/usuario2.jpg" />
+										<div class="eight columns">
+											<h3><a href="#">Nombre de Usuario</a></h3>
+											<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi con el lorem ipsum con dolor sit amet fin del lorem ipsum de ejemplo.</p>
+										</div>
+
+									</div>
+
+									<div class="btns_responder">
+										<div>
+										<a href="#" class="btn">Responder Comentario</a>
+										<a href="#" class="btn">Reportar</a>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+						<div class="comentario">
+							<img class="foto_usuario" src="media/samples/usuario2.jpg" />
+							<div class="ten columns texto">
+								<h3><a href="#">Nombre de Usuario</a></h3>
+								<div class="over_comentario">
+									<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi con el lorem ipsum con dolor sit amet fin del lorem ipsum de ejemplo.</p>
+									<div class="btns_responder">
+										<div>
+										<a href="#" class="btn">Responder Comentario</a>
+										<a href="#" class="btn">Reportar</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+
+
 						<div class="comentario">
-							<img class="foto_usuario" src="#" />
-							<div class="ten columns">
+							<img class="foto_usuario" src="media/samples/usuario.jpg" />
+							<div class="ten columns texto">
 								<h3><a href="#">Nombre de Usuario</a></h3>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi con el lorem ipsum con dolor sit amet fin del lorem ipsum de ejemplo.</p>
+								<div class="over_comentario">
+									<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi con el lorem ipsum con dolor sit amet fin del lorem ipsum de ejemplo.</p>
+									<div class="btns_responder">
+										<div>
+										<a href="#" class="btn">Responder Comentario</a>
+										<a href="#" class="btn">Reportar</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 
-						<div class="comentario">
-							<img class="foto_usuario" src="#" />
-							<div class="ten columns">
-								<h3><a href="#">Nombre de Usuario</a></h3>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus condimentum morbi con el lorem ipsum con dolor sit amet fin del lorem ipsum de ejemplo.</p>
-							</div>
-						</div>
 
 					</div>
 				</div>
@@ -841,20 +879,6 @@ Lorem ipsum dolor sit amet felis varius magna Cras sodales fames.</p>
 
 		</div>
 		
-		<section id="social_module">
-			<div class="container">
-				<h2>Haga parte de nuestra comunidad de amigos de la cocina</h2>
-				<div class="facebook block">
-					<h3>Facebook</h3>
-				</div>
-				<div class="twitter block">
-					<h3>Twitter</h3>
-				</div>
-				<div class="pinterest block">
-					<h3>Pinterest</h3>
-				</div>
-			</div>
-		</section>
 
 		<!-- FOOTER -->
 		<footer>

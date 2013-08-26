@@ -7,6 +7,13 @@ $(document).ready(function(){
         return false;
     })
 
+
+    //LISTADO TIPS INGREDIENTES
+    $('.tip_ingrediente a').click(function(){
+        $(this).parent().parent().find('ul').slideToggle(500);
+        return false;
+    })
+
     // MENU **********************************************************************
       $(".main_nav li:has(div)").addClass("menu-level");
       $('.main_nav a.menu').mouseenter(function(){
