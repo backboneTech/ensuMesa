@@ -8,9 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-
-	<title>EnsuMesa :: Recetas Landing</title>
-
+	<title>EnsuMesa :: Search Results</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -33,7 +31,6 @@
 	<script src="includes/js/jquery-1.8.2.min.js"></script>
 	<script src="includes/js/modernizr-2.5.3.min.js"></script>
 
-	<!-- FLEXSLIDER -->
 	<script src="includes/js/jquery.flexslider-min.js"></script>
 	<script>
 		$(window).load(function(){
@@ -65,19 +62,6 @@
 				start: function(slider) {
 				  slider.removeClass('loading');
 				}
-		    });
-		    
-		    $('#recetas_gallery .flexslider').flexslider({
-		      animation: "slide",  
-		      directionNav: true,
-		      prevText: "Previous",
-		      nextText: "Next",
-		      controlNav: false,
-		      slideshow: false, 
-		      controlsContainer: ".controls",
-		      start: function(slider) {
-		        slider.removeClass('loading');
-		      }
 		    });
 		});
 	</script>
@@ -238,7 +222,7 @@
 
 </head>
 <body>
-	<div id="page" class="recetas_landing">
+	<div id="page" class="search_results">
 		<header>
 			<div class="container">
 				<h1 class="logo five columns">
@@ -410,197 +394,76 @@
 		</section>
 
 		<div class="page_content container">
+			<!--COLUMAN IZQUIERDA -->
+			<div class="two-thirds column">
+				<div class="nine columns floatRight">
+					<div class="line_break"></div>
+					<div class="recetas_block results">
+						<h2>Recetas <a href="">345 Resultados</a></h2>
+
+						<div class="post three columns">
+							<img width="160" src="media/fpo-img-receta-thumb.jpg">
+							<p>
+								<select>
+									<option>Opciones</option>
+									<option>Opciones</option>
+									<option>Opciones</option>
+								</select>
+							</p>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						</div>
+
+						<div class="post three columns">
+							<img width="160" src="media/fpo-img-receta-thumb.jpg">
+							<p>
+								<select>
+									<option>Opciones</option>
+									<option>Opciones</option>
+									<option>Opciones</option>
+								</select>
+							</p>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						</div>
+
+						<div class="post three columns">
+							<img width="160" src="media/fpo-img-receta-thumb.jpg">
+							<p>
+								<select>
+									<option>Opciones</option>
+									<option>Opciones</option>
+									<option>Opciones</option>
+								</select>
+							</p>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
+						</div>
+
+					</div>
+				</div>
+			</div>
 			
-			<!-- COLUMN LEFT -->
-			<div class="two-thirds column alpha"> <!-- left -->
-				<div id="recetas_gallery">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<img src="media/fpo-img-recetas-landing.jpg">
-								<h2><a href="">Título aquí</a></h2>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus...</p>
-							</li>
-							<li>
-								<img src="media/fpo-img-recetas-landing.jpg">
-								<h2><a href="">Título aquí</a></h2>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus...</p>
-							</li>
-							<li>
-								<img src="media/fpo-img-recetas-landing.jpg">
-								<h2><a href="">Título aquí</a></h2>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti, vel venenatis id hymenaeos mattis mus...</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<section id="recetas_list" class="nine columns floatRight">
-					<ul>
-						<li>
-							<h2><a href="">Cocinas del mundo</a></h2>
-							<img width="98" src="media/fpo-img-receta-thumb.jpg">
-							<div class="info">
-								<h3><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p class="description">Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</li>
-						<li>
-							<h2><a href="">Tipo de plato</a></h2>
-							<img width="98" src="media/fpo-img-receta-thumb.jpg">
-							<div class="info">
-								<h3><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p class="description">Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</li>
-						<li>
-							<h2><a href="">Preparación</a></h2>
-							<img width="98" src="media/fpo-img-receta-thumb.jpg">
-							<div class="info">
-								<h3><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p class="description">Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</li>
-						<li>
-							<h2><a href="">Tipo de plato</a></h2>
-							<img width="98" src="media/fpo-img-receta-thumb.jpg">
-							<div class="info">
-								<h3><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p class="description">Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</li>
-						<li>
-							<h2><a href="">Preparación</a></h2>
-							<img width="98" src="media/fpo-img-receta-thumb.jpg">
-							<div class="info">
-								<h3><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p class="description">Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</li>
-						<li>
-							<h2><a href="">Tipo de plato</a></h2>
-							<img width="98" src="media/fpo-img-receta-thumb.jpg">
-							<div class="info">
-								<h3><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p class="description">Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</li>
-						<li>
-							<h2><a href="">Preparación</a></h2>
-							<img width="98" src="media/fpo-img-receta-thumb.jpg">
-							<div class="info">
-								<h3><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h3>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								<p class="description">Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</li>
-					</ul>
-				</section>
-			</div>
-
-			<!-- COLUMN RIGHT -->
-			<div class="one-third column omega">
-				<div id="gAdd_block">Google Ads</div>
-
-				<div id="recetas_destacadas" class="block">
-					<h2>Recetas <b>destacadas</b></h2>
-					<div id="tabs">
-					  <ul>
-					    <li><a href="#tabs-1">Recientes</a></li>
-					    <li><a href="#tabs-2">+ Calificadas</a></li>
-					    <li class="last"><a href="#tabs-3">+ Compartidas</a></li>
-					  </ul>
-					  <div id="tabs-1">
-					    <ul>
-					    	<li>
-					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
-					    		<div class="info">
-					    			<p><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-					    		</div>
-					    	</li>
-					    	<li class="last">
-					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
-					    		<div class="info">
-					    			<p><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-					    		</div>
-					    	</li>
-					    </ul>
-					  </div>
-					  <div id="tabs-2">
-					    <ul>
-					    	<li>
-					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
-					    		<div class="info">
-					    			<p><a href="">CALIFICADAS dolor sit amet, consectetur adipisicing elit</a></p>
-					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-					    		</div>
-					    	</li>
-					    	<li class="last">
-					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
-					    		<div class="info">
-					    			<p><a href="">CALIFICADAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-					    		</div>
-					    	</li>
-					    </ul>
-					  </div>
-					  <div id="tabs-3">
-					    <ul>
-					    	<li>
-					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
-					    		<div class="info">
-					    			<p><a href="">COMPARTIDAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-					    		</div>
-					    	</li>
-					    	<li class="last">
-					    		<img width="85" src="media/fpo-img-receta-thumb.jpg">
-					    		<div class="info">
-					    			<p><a href="">COMPARTIDAS ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-					    			<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-					    		</div>
-					    	</li>
-					    </ul>
-					  </div>
-					</div>
-				</div>
-
-				<div id="coleccion_destacada" class="block border_top_none">
-					<h2>Colección <b>destacada</b></h2>
-					<div class="rating">
-						<img src="media/fpo-star-raiting.png">
-					</div>
-					<div class="img_cont">
-						<img class="img_thumbBig" src="media/fpo-img-receta-thumb.jpg">
-						<img class="img_thumbSmall" src="media/fpo-img-receta-thumb.jpg">
-						<img class="img_thumbSmall" src="media/fpo-img-receta-thumb.jpg">
-						<img class="img_thumbSmall" src="media/fpo-img-receta-thumb.jpg">
-						<img class="img_thumbSmall" src="media/fpo-img-receta-thumb.jpg">
-					</div>
-					<h3>Fin de semana en la finca</h3>
-					<p class="autor">Por: <a href="">Juan Fernando Herran</a></p>
-				</div>
-
-				<div class="block border_top_none borderNone">
-					<h2>Técnica <b>destacada</b></h2>
-					<img src="media/img-video.jpg">
-					<p><a href="">Lorem ipsum dolor sit amet felis varius magna</a></p>
-				</div>
-			</div>
-
+			<!--COLUMAN DERECHA -->
+			<div class="one-third column"></div>
 		</div>
+		
+		<section id="social_module">
+			<div class="container">
+				<h2>Haga parte de nuestra comunidad de amigos de la cocina</h2>
+				<div class="facebook block">
+					<h3>Facebook</h3>
+				</div>
+				<div class="twitter block">
+					<h3>Twitter</h3>
+				</div>
+				<div class="pinterest block">
+					<h3>Pinterest</h3>
+				</div>
+			</div>
+		</section>
 
+		<!-- FOOTER -->
 		<footer>
 			<div class="container">
 				<div class="tablet_Row">
