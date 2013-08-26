@@ -77,6 +77,7 @@ input[placeholder] {color: #999999;}
 .img_thumbBig {width: 135px;}
 .img_thumbSmall {width: 64px;}
 .page_content {margin-bottom: 20px;}
+.line_break {border-bottom: 1px solid #CCCCCC; height: 5px; margin: 7px 0;}
 /* ****************************************************************************************************************
     estilos con posibles cambios de temas (colores)
 **************************************************************************************************************** */
@@ -882,6 +883,25 @@ footer .tablet_Row {
 #page.ingredientes_detail .line_break {border-bottom: 1px solid #CCCCCC; height: 5px; margin: 7px 0;}
 #page.ingredientes_detail .description {margin-bottom: 40px;}
 #page.ingredientes_detail .description h3 {font-size: 16px; color: #3D312A; margin-bottom: 8px;}
+
+
+
+/* ****************************************************************************************************************
+    PAGINA :: INGREDIENTES LANDING
+**************************************************************************************************************** */
+
+#ingredientes_busqueda{ border-top: solid 1px #CCC; padding-top: 5px; margin-top: 20px;}
+    .abc{ text-align: right; padding: 10px 0;}
+    .abc .destacados{ float: left;}
+    .abc p{ font-weight: 100; font-size: 15px;}
+    .abc p a{ display: inline-block; margin: 0 7px 0 0 }
+    #ingredientes_busqueda ul{ display: block; margin: 0 0 0 -2.4%; padding: 5px 0;}
+    #ingredientes_busqueda li{ float: left; width: 22.5%; margin:0 0 10px 2.4%; }
+    #ingredientes_busqueda ul a{ line-height:200%;}
+    a.foto_lista_ingrediente img{ border:solid 1px #CCC; display:block; width: 100%;}
+    a.foto_lista_ingrediente:hover img{ border-color: #3DAAA8;}
+    .cargarmas{ clear: both; padding: 20px 0 40px; text-align: center;}
+    .cargarmas img{ margin-right: 10px;}
 
 /* ****************************************************************************************************************
     MODALS
