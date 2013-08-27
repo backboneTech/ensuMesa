@@ -949,7 +949,7 @@ footer .tablet_Row {
 .search_filter_block {margin-bottom: 30px;}
 .search_filter_block h2 {font-size: 16px; font-weight: 600; margin-bottom: 7px;}
 .search_filter_block .accordion {}
-.search_filter_block .accordion h3 {
+.search_filter_block .accordion h3.accordion_header {
     cursor: pointer;
     background: url(../media/icn-accordion-more.png) no-repeat right center;
     text-transform: uppercase;
@@ -958,12 +958,14 @@ footer .tablet_Row {
     padding: 4px 0;
     /*margin-bottom: 7px;*/
 }
-.search_filter_block .accordion h3.ui-accordion-header-active {
+.search_filter_block .accordion h3.accordion_header.show {
     background: url(../media/icn-accordion-less.png) no-repeat right center;
     margin-bottom: 7px;   
     border-bottom: 1px solid #CCCCCC;
 }
 .search_filter_block .accordion h3.last {border-bottom: 1px solid #CCCCCC;}
+.accordion_content {overflow: hidden; padding: 12px 0;}
+.accordion_content li {margin: 4px 0; overflow: hidden;}
 /* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
