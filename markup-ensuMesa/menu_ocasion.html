@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>EnsuMesa :: Search Results</title>
+	<title>EnsuMesa :: Menu Ocasión</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -205,8 +205,25 @@
 	<script src="includes/js/jquery_ui/jquery-ui-1.10.3.custom.min.js"></script>
 	<!-- <link href="includes/js/jquery_ui/css/humanity/jquery-ui-1.10.3.custom.css" rel="stylesheet"> -->
 	<script>
+	//jquery`UI funcionalidades
 		$(function() {
 			$( "#tabs" ).tabs();
+
+			$( ".draggable .post_result" ).draggable({ 
+				revert: "invalid",
+				helper: "clone" 
+			});
+			$( ".droppable .box" ).droppable({
+				hoverClass: "ui-state-active",
+				drop: function( event, ui ) {
+					$("<div class='post_save'></div>").append(ui.draggable.contents().clone()).appendTo(this);
+
+				//  $( this )
+				//    .addClass( "ui-state-highlight" )
+				//    .find( "p" )
+				//      .html( "Dropped!" );
+				}
+		    });
 		});
 	</script>
 
@@ -222,7 +239,7 @@
 
 </head>
 <body>
-	<div id="page" class="search_results">
+	<div id="page" class="menu_ocasion logged">
 		<header>
 			<div class="container">
 				<h1 class="logo five columns">
@@ -231,14 +248,24 @@
 					</a>
 				</h1>
 
-				<div class="social_module">
-					<img src="media/fpo-social-header.png">
+				<div class="welcome_msg">
+					<p>Bienvenido a <b>ensuMesa</b></p>
 				</div>
 
 				<div class="login_cart_module">
 					<ul>
-						<li><a href="">Ingresar</a> /</li>
-						<li><a href="">Registrarse</a> /</li>
+						<li class="short_nav_select">
+							<select class="short_nav">
+								<option>Ver mi cuaderno de cocina</option>
+								<option>Mis recetas</option>
+								<option>Mis menús</option>
+								<option>Mis colecciones</option>
+								<option>Mis foros</option>
+								<option>Editar perfil</option>
+								<option>Cerrar sesión</option>
+							</select>
+						</li>
+						<li><a class="user" href="">Juan Antonio Bermudez</a></li>
 						<li>
 							<div class="cart_block">
 								<div class="cart"><span>20</span></div>
@@ -394,167 +421,13 @@
 		</section>
 
 		<div class="page_content container">
-
 			<!--COLUMAN IZQUIERDA -->
-			<div class="two-thirds column">
-				<div class="nine columns floatRight">
-					<div class="recetas_block results">
-						<h2>Recetas <a href="">345 Resultados</a></h2>
+			<div class="one-third column">
 
-						<div class="counter">
-							<div class="counter_number">55</div>
-						</div>
-
-						<div class="results_content">
-							<div class="post three columns alpha omega">
-								<a href=""><img width="160" src="media/fpo-img-receta-thumb.jpg"></a>
-								<p>
-									<select>
-										<option>Opciones</option>
-										<option>Opciones</option>
-										<option>Opciones</option>
-									</select>
-								</p>
-								<p class="description"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-							</div>
-
-							<div class="post three columns alpha omega">
-								<a href=""><img width="160" src="media/fpo-img-receta-thumb.jpg"></a>
-								<p>
-									<select>
-										<option>Opciones</option>
-										<option>Opciones</option>
-										<option>Opciones</option>
-									</select>
-								</p>
-								<p class="description"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-							</div>
-
-							<div class="post three columns alpha omega">
-								<a href=""><img width="160" src="media/fpo-img-receta-thumb.jpg"></a>
-								<p>
-									<select>
-										<option>Opciones</option>
-										<option>Opciones</option>
-										<option>Opciones</option>
-									</select>
-								</p>
-								<p class="description"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-							</div>
-
-							<div class="post three columns alpha omega">
-								<a href=""><img width="160" src="media/fpo-img-receta-thumb.jpg"></a>
-								<p>
-									<select>
-										<option>Opciones</option>
-										<option>Opciones</option>
-										<option>Opciones</option>
-									</select>
-								</p>
-								<p class="description"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-							</div>
-
-							<div class="post three columns alpha omega">
-								<a href=""><img width="160" src="media/fpo-img-receta-thumb.jpg"></a>
-								<p>
-									<select>
-										<option>Opciones</option>
-										<option>Opciones</option>
-										<option>Opciones</option>
-									</select>
-								</p>
-								<p class="description"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-							</div>
-
-							<div class="post three columns alpha omega">
-								<a href=""><img width="160" src="media/fpo-img-receta-thumb.jpg"></a>
-								<p>
-									<select>
-										<option>Opciones</option>
-										<option>Opciones</option>
-										<option>Opciones</option>
-									</select>
-								</p>
-								<p class="description"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></p>
-								<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="results">
-						<h2><a href="">Ingredientes</a></h2>
-
-						<div class="counter">
-							<div class="counter_number">55</div>
-						</div>
-						<div class="post">
-							<div class="img_cont">
-								<a href=""><img src="media/fpo-img-receta-thumb.jpg"></a>
-							</div>
-							<div class="descriptions">
-								<h4><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</div>
-
-						<div class="post">
-							<div class="img_cont">
-								<a href=""><img src="media/fpo-img-receta-thumb.jpg"></a>
-							</div>
-							<div class="descriptions">
-								<h4><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="results">
-						<h2><a href="">Técnicas</a></h2>
-
-						<div class="counter">
-							<div class="counter_number">55</div>
-						</div>
-						<div class="post">
-							<div class="img_cont">
-								<a href=""><img src="media/fpo-img-receta-thumb.jpg"></a>
-							</div>
-							<div class="descriptions">
-								<h4><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="results">
-						<h2><a href="">Blog</a></h2>
-
-						<div class="counter">
-							<div class="counter_number">55</div>
-						</div>
-						<div class="post">
-							<div class="img_cont">
-								<a href=""><img src="media/fpo-img-receta-thumb.jpg"></a>
-							</div>
-							<div class="descriptions">
-								<h4><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
-								<p>Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti. Lorem ipsum dolor sit amet faucibus vel vestibulum condimentum suscipit fames. Taciti.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<!--COLUMAN DERECHA -->
-			<div class="one-third column alpha omega">
-
+				<!-- SEARCH FILTER MODULE -->
 				<div class="search_filter_block">
 					<h2>Filtre su búsqueda</h2>
+					<p>Arrastre sus recetas favoritas a esta colección.</p>
 					<div class="accordion">
 						<h3 class="accordion_header show">Tipo de contenido</h3>
 						<div class="accordion_content">
@@ -592,7 +465,31 @@
 								</ul>
 							</div>
 
-							<div class="clear"></div>
+							<!-- DRAGGABLE RESULTS -->
+							<div class="draggable results">
+
+								<div class="post_result">
+									<div class="img_cont">
+										<img src="media/fpo-img-receta-thumb.jpg">
+									</div>
+									<div class="info">
+										<h3><a href="">Lorem ipsum dolor sit ame, consectetur adipisicing elit</a></h3>
+										<p class="author">Por: <a href="">Juan Herran</a></p>
+									</div>
+								</div>
+
+								<div class="post_result">
+									<div class="img_cont">
+										<img src="media/fpo-img-receta-thumb.jpg">
+									</div>
+									<div class="info">
+										<h3><a href="">Lorem ipsum dolor sit ame, consectetur adipisicing elit</a></h3>
+										<p class="author">Por: <a href="">Juan Herran</a></p>
+									</div>
+								</div>
+
+							</div><!-- END DRAGGABLE RESULTS -->
+
 						</div>
 
 						<h3 class="accordion_header show">cocinas del mundo</h3>
@@ -831,66 +728,59 @@
 					</div>
 				</div>
 
-				<!-- PROMO FANATICOS DEL SABOR -->
-				<div id="promo_fanaticos">
-					<ul>
-						<li>
-							<article>
-								<div class="header">
-									<h3>Fanáticos del sabor</h3>
-									<h2>Chocolate negro</h2>
-									<h6>Un placer para tu vida</h6>
-								</div>
-								<img src="media/fpo-img-fanaticos-sabor.jpg">
-								<div class="copy">
-									<h5>Mousse de chocolate y fresas</h5>
-									<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								</div>
-								<div class="promo_logo">
-									<img src="media/fpo-logo-promo-fanaticos.png">
-								</div>
-							</article>
-						</li>
-						<li>
-							<article>
-								<div class="header">
-									<h3>Fanáticos del sabor</h3>
-									<h2>Chocolate negro Chocolate negro</h2>
-									<h6>Un placer para tu vida</h6>
-								</div>
-								<img src="media/fpo-img-fanaticos-sabor.jpg">
-								<div class="copy">
-									<h5>Mousse de chocolate y fresas</h5>
-									<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								</div>
-								<div class="promo_logo">
-									<img src="media/fpo-logo-promo-fanaticos.png">
-								</div>
-							</article>
-						</li>
-						<li>
-							<article>
-								<div class="header">
-									<h3>Fanáticos del sabor</h3>
-									<h2>Chocolate negro 2</h2>
-									<h6>Un placer para tu vida</h6>
-								</div>
-								<img src="media/fpo-img-fanaticos-sabor.jpg">
-								<div class="copy">
-									<h5>Mousse de chocolate y fresas Mousse de chocolate y fresas</h5>
-									<p class="chef">Chef: <a href="">Juan Fernando Herran</a></p>
-								</div>
-								<div class="promo_logo">
-									<img src="media/fpo-logo-promo-fanaticos.png">
-								</div>
-							</article>
-						</li>
-					</ul>
+			</div><!-- END COLUMN LEFT -->
+			
+			<!--COLUMAN DERECHA -->
+			<div class="two-thirds column alpha omega">
+				<div class="nine columns">
+					<h1>Nombre de la ocasión</h1>
 				</div>
-				
-				<div id="gAdd_block">Google Ads</div>
+				<div class="one column">
+					<div class="counter">
+						<div class="counter_number arrow_left">55</div>
+					</div>
+				</div>
+				<div class="ten columns">
+					<a class="ver_ocasiones" href="">Ver todos mis menús de ocasión</a>
+					<div class="calificar floatRight">
+						<div class="valor floatLeft">
+							<a class="cinco" href="#">&nbsp;</a>
+							<a class="cuatro" href="#">&nbsp;</a>
+							<a class="tres" href="#">&nbsp;</a>
+							<a class="dos" href="#">&nbsp;</a>
+							<a class="una" href="#">&nbsp;</a>
+							<div style="width:50%" class="calificacion">
+							</div>
+						</div>
+						<p class="floatLeft">36 calificaciones</p>
+					</div>
 
+				</div>
+
+				<div class="six columns">
+
+					<div class="droppable">
+						<h5>Entrada <a href="">Agregar a lista de mercado</a></h5>
+						<div class="box">
+
+							<div class="post_save">
+								<div class="img_cont">
+									<img src="media/fpo-img-receta-thumb.jpg">
+								</div>
+								<div class="info">
+									<h3><a href="">Lorem ipsum dolor sit ame, consectetur adipisicing elit</a></h3>
+									<p class="author">Por: <a href="">Juan Herran</a></p>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<div class="five columns"></div>
 			</div>
+			
 		</div>
 
 		<!-- FOOTER -->
