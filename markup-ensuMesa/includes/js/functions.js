@@ -46,22 +46,6 @@ $(document).ready(function(){
 
       // SEARCH RESULTS ADD CLASS TO COLUMNS
       $('.results_content .post.three.columns:nth-child(3n)').addClass('last');
-
-
-      //ACCORDION
-      $('.accordion .accordion_header').click(function(){
-        if($(this).hasClass('show'))
-        {
-            $(this).removeClass('show');
-            $(this).next('.accordion_content').slideUp('fast');
-        }
-        else
-        {
-            $(this).addClass('show');
-            $(this).next('.accordion_content').slideDown('fast');
-        }
-        return false;
-    });
       
 
 });

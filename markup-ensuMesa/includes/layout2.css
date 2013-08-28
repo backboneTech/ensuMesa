@@ -1,0 +1,56 @@
+/* ****************************************************************************************************************
+    PAGE :: MI PERFIL
+**************************************************************************************************************** */
+
+.miperfil{ border-top: solid 1px #CCC; margin-top: 25px;}
+	.smallcount{ float: right; margin: 15px 0 0; font-size: 14px;}
+	.miperfil h1{ margin: 10px 0;}
+	.miperfil h2{ border-top: solid 1px #CCC; display: block; padding: 10px 0; font-weight: 600;}
+	h2 .mis{ font-weight: 100; text-transform: uppercase; }
+	.miperfil #recetas_cat_list{ margin: 0 0 5px}
+	.miperfil #recetas_cat_list li{ border-top-color: #DDD; margin: 0;}
+	.coleccion img{ float: left; margin:0 0 7px 7px; }
+	.coleccion{ width: 49%; float: left; margin-left: 1%;}
+	.coleccion .smallcount{ margin: -30px 7px 0}
+
+	#miscolecciones{ margin-left: -2%; }
+	.listados h3{ font-size: 16px; color: #3d312a; font-weight: 100;}
+	.listados li{ color:#3DAAA8; margin-top: 10px;}
+	.listados ul{ list-style-type:disc; margin-left: 20px;}
+
+	.foros_lista{ margin-top: 15px;}
+	.foros_link{ margin-top: 25px;}
+
+	.user_box{ background-color: #f5f2ee; padding: 20px; margin:20px 0 0 10px; }
+		.foto_usuario_big{ float: left; width: 75px; margin-bottom: 10px;}
+		.user_box .nombre{ float: left; width: 150px; padding: 5px 0 0 10px;}
+		.user_box .nombre span{ display: block; color: #333; border-bottom: dotted 1px #ccc; font-size: 13px; text-transform: uppercase; padding: 5px 0 }
+		.user_box .amigos{ clear: both; border-top: solid 1px #CCC;}
+		.user_box .amigos h2{ font-size: 12px; text-transform: uppercase; margin: 5px 0;}
+		.user_box .smallcount{ margin: 3px 0 0;}
+		.user_box .amigos img{ float: left; margin: 6px 6px 0 0;}
+	.medallas{ background: #efe9e2 url(../media/trama.png) top right; padding: 8px; margin:20px 0 0 10px; }
+		.medallas .fondo{ background-color: #efe9e2;}
+		.medallas header{ background: url(../media/dientes.png) repeat-x top right; text-align: center; padding: 10px 50px 10px 20px; position: relative; line-height: 120%; color: #3d312a;} 
+		.medallas header img{ position: absolute; top: 0; right: 0;}
+		.medallas h1{ font-size: 18px; margin: 4px 0; }
+		.medalla_bienvenido{ text-align: center; padding: 2px; border-bottom: solid 1px #cfc1aa;  position: relative;}
+		.medalla_bienvenido a{font-family: 'merriweather'; font-size: 14px;}
+
+		.medalla{ padding: 10px 0; margin: 0 10px; border-bottom: dotted 1px #bfbab5;}
+		.medalla h2{ font-size: 12px; font-weight: 600; margin-bottom: 10px;}
+		.medalla a{ width: 48px; height: 49px; display: inline-block; background: url(../media/medallas.png) no-repeat top left; }
+		.medalla a:hover{ text-decoration: none;}
+		.medalla.b_fork a.unact{ background-position: 0 -50px; }
+		.medalla.b_spoon a{ background-position: -50px 0; }
+		.medalla.b_spoon a.unact{ background-position: -50px -50px; }
+		.medalla.b_knife a{ background-position: -100 0px; }
+		.medalla.b_knife a.unact{ background-position: -100px -50px; }
+		.medalla.b_taza a{ background-position: -150px 0px; }
+		.medalla.b_taza a.unact{ background-position: -150px -50px; }
+
+		.over_dialog_box{ position: absolute; width:150px; left: 50%; margin-left: -300px; top: -10px;  background: #fff url(../media/num1.png) no-repeat 7px 50%; padding: 10px 10px 10px 40px; text-align: left; box-shadow: 2px 0 10px 0 rgba(0,0,0,.6)}
+		.over_dialog_box img{ position: absolute; right: -6px; top:25px;}
+
+
+
