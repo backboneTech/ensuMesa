@@ -85,6 +85,10 @@ $(document).ready(function(){
         $(this).parent().toggleClass('select', this.checked);
       });
 
+      // MIS COLECCIONES
+      $('.colecciones_box .post_colecciones:nth-child(3n)').addClass('last');
+
+
       
 
 });

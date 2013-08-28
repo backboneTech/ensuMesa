@@ -391,7 +391,7 @@ footer ul li a:hover {color: #3DAAA8; text-decoration: none;}
 
 footer ul.first {margin: 0 30px 0 0;}
 footer ul.first li {font-size: 11px; margin: 4px 0;}
-footer ul.first li h1 {margin-bottom: 10px;}
+footer ul.first li h1 {margin-bottom: 10px; border: medium none !important;}
 footer ul.first li a {text-decoration: underline; color: #6C564F; font-size: 11px;}
 footer ul.first li a:hover {text-decoration: none;}
 
@@ -687,7 +687,7 @@ footer .tablet_Row {
 #recetas_gallery .flexslider .flex-direction-nav a {
     background: url("../media/slider-controls_t2.png") no-repeat scroll left center;
     background-color: rgba(0, 0, 0, 0.6);
-    height: 319px;
+    height: 330px;
     top: 25px;
 }
 #recetas_gallery .flexslider .flex-direction-nav .flex-prev {left: 0;}
@@ -1021,7 +1021,7 @@ header .welcome_msg {
     padding: 7px 0;
     font-weight: 100;
 }
-#page.menu_ocasion .counter {margin-top: 6px;}
+#page.menu_ocasion .counter {margin-top: 45px;}
 
 #page.menu_ocasion .calificar {
     margin-right: 62px;
@@ -1036,6 +1036,7 @@ header .welcome_msg {
     margin-top: 7px;
 }
 #page.menu_ocasion .cargarmas {padding: 10px 0;}
+#page.menu_ocasion .social_module {margin-bottom: 10px;}
 /* DRAGGABLE RESULTS */
 .draggable.results {clear: both;}
 
@@ -1140,6 +1141,57 @@ header .welcome_msg {
     width: 28px;
 }
 .btn_print:hover {background-position: center bottom;}
+
+/* PAGE ::  MENU SEMANAL */
+#page.menu_semanal {}
+#page.menu_semanal .search_filter_block {margin-top: 20px;}
+#page.menu_semanal .search_filter_block h2 {margin-bottom: 0;}
+#page.menu_semanal .search_filter_block .accordion {margin-top: 10px;}
+
+#page.menu_semanal h1 {
+    color: #3D312A;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 7px 0;
+    font-weight: 100;
+}
+#page.menu_semanal .counter {margin-top: 45px;}
+
+#page.menu_semanal .calificar {
+    margin-right: 62px;
+    margin-top: 7px;
+}
+#page.menu_semanal .calificar .valor {
+    margin-right: 15px;
+    margin-top: 4px;
+}
+#page.menu_semanal .ver_ocasiones {
+    display: inline-block;
+    margin-top: 7px;
+}
+#page.menu_semanal .cargarmas {padding: 10px 0;}
+#page.menu_semanal .social_module {margin-bottom: 10px;}
+
+/* ****************************************************************************************************************
+    MIS COLECCIONES
+**************************************************************************************************************** */
+#page.mis_colecciones {}
+#page.mis_colecciones .line_break {margin-bottom: 15px;}
+#page.mis_colecciones .counter {margin-top: -5px;}
+
+.post_colecciones {
+    width: 275px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+.post_colecciones.last {margin-right: 0;}
+.post_colecciones h2 {margin-bottom: 3px;}
+.post_colecciones h2 a {font-size: 16px;}
+.post_colecciones h2 .cantidad {float: right; font-size: 14px; margin-right: 5px; margin-top: 2px; font-weight: 100;}
+.post_colecciones .img_cont {overflow: hidden;}
+.post_colecciones .img_cont img {float: left; margin: 2px;}
+
 /* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
@@ -1454,21 +1506,27 @@ pre {
 
 /* PRINTS STYLES para Lista de mercado*/
 @media print {
-   .welcome_msg, 
-   .login_cart_module,
-   .search_module,
-   .main_nav,
-   #breadcrumb,
-   #page.menu_ocasion .one-third.column,
-   #page.menu_ocasion .nine.columns,
-   #page.menu_ocasion .one.column,
-   #page.menu_ocasion .ten.columns,
-   #page.menu_ocasion .six.columns,
-   footer,
-   label.checkSkin.selected,
-   #lista_mercado li.select,
-   #lista_mercado p {
+    .welcome_msg, 
+    .login_cart_module,
+    .search_module,
+    .main_nav,
+    #breadcrumb,
+    #page.menu_ocasion .one-third.column,
+    #page.menu_ocasion .nine.columns,
+    #page.menu_ocasion .one.column,
+    #page.menu_ocasion .ten.columns,
+    #page.menu_ocasion .six.columns,
+    footer,
+    label.checkSkin.selected,
+    #lista_mercado li.select,
+    #lista_mercado p {
         display:none;
     }
+
+    #page.menu_ocasion .one-third.column,
+    #page.menu_ocasion .nine.columns,
+    #page.menu_ocasion .one.column,
+    #page.menu_ocasion .ten.columns,
+    #page.menu_ocasion .six.columns {display: none;}
 }
 
