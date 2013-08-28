@@ -1035,13 +1035,14 @@ header .welcome_msg {
     display: inline-block;
     margin-top: 7px;
 }
-
+#page.menu_ocasion .cargarmas {padding: 10px 0;}
 /* DRAGGABLE RESULTS */
 .draggable.results {clear: both;}
 
 .results .post_result {
     background-color: rgba(255, 255, 255, 100);
     overflow: hidden; cursor: move; border-bottom: 1px dotted #CCCCCC; padding: 8px 5px;
+    width: 300px;
 }
 .results .post_result:hover {background-color: #F8F2EB;}
 
@@ -1054,7 +1055,12 @@ header .welcome_msg {
 .results .post_result .info {margin-left: 60px;}
 .results .post_result .info h3 {margin-bottom: 4px;}
 
-.droppable {margin: 10px 0; min-height: 100px;}
+.droppable {
+    border-top: 1px solid #CCCCCC;
+    margin: 15px 0;
+    min-height: 100px;
+    padding-top: 10px;
+}
 .droppable .box {min-height: 100px; margin: 10px 0;}
 .droppable .box.ui-state-active {background-color: #F8F2EB;}
 .droppable h5 {
@@ -1077,10 +1083,63 @@ header .welcome_msg {
      width: 97%;
      margin: 8px 0;
 }
-.droppable .post_save .img_cont {float: left; width: 85px;}
+.droppable .post_save .img_cont {cursor: pointer; float: left; width: 85px; position: relative;}
+.droppable .post_save .img_cont img {border: 1px solid rgba(255, 255, 255, 0);}
+.droppable .post_save .img_cont:hover .overlay {
+    background: url(../media/icn-delete-draggable.png) no-repeat center #FFFFFF;
+    border: 1px solid #CCCCCC;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.droppable .post_save .img_cont:hover img {border: 1px solid #CCCCCC;}
 .droppable .post_save .info {margin-left: 95px;}
 .droppable .post_save .info h3 {margin-bottom: 5px;}
 
+/* LISTA DE MERCADO*/
+#lista_mercado {
+    margin: 15px 8px 8px;
+    padding: 8px;
+    background-color: #EFE9E2;
+}
+#lista_mercado h5 {
+    border-bottom: 1px dotted #CCCCCC;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+}
+#lista_mercado p {font-weight: 100; font-size: 11px;}
+#lista_mercado ul {padding-bottom: 5px; margin-bottom: 10px; border-bottom: 1px dotted #CCCCCC;}
+#lista_mercado li {overflow: hidden; margin: 10px 0;}
+#lista_mercado label.checkSkin {
+    margin-right: 10px;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: 210px;
+    font-size: 12px;
+}
+#lista_mercado label.checkSkin.selected {text-decoration: line-through;}
+
+.btn_email {
+    background: url(../media/icn-mail.png) no-repeat center top;
+    float: left;
+    text-indent: -9000px;
+    height: 26px;
+    width: 28px;
+    margin-right: 10px;
+}
+.btn_email:hover {background-position: center bottom;}
+.btn_print {
+    background: url(../media/icn-print.png) no-repeat center top;
+    float: left;
+    text-indent: -9000px;
+    height: 26px;
+    width: 28px;
+}
+.btn_print:hover {background-position: center bottom;}
 /* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */
@@ -1392,3 +1451,24 @@ pre {
 .font_roboto h2 {font-weight: 600;}     /* medium */
 .font_roboto h3 {font-weight: normal;}  /* normal */
 .font_roboto h4 {font-weight: 100;}     /* lighter */
+
+/* PRINTS STYLES para Lista de mercado*/
+@media print {
+   .welcome_msg, 
+   .login_cart_module,
+   .search_module,
+   .main_nav,
+   #breadcrumb,
+   #page.menu_ocasion .one-third.column,
+   #page.menu_ocasion .nine.columns,
+   #page.menu_ocasion .one.column,
+   #page.menu_ocasion .ten.columns,
+   #page.menu_ocasion .six.columns,
+   footer,
+   label.checkSkin.selected,
+   #lista_mercado li.select,
+   #lista_mercado p {
+        display:none;
+    }
+}
+

@@ -61,7 +61,30 @@ $(document).ready(function(){
             $(this).next('.accordion_content').slideDown('fast');
         }
         return false;
-    });
+      });
+
+      //FUNCIOANLIDADES DRAGGABLE & DROPPABLE + MENU OCASION
+      $( ".draggable .post_result" ).draggable({ 
+        revert: "invalid",
+        helper: "clone" 
+      });
+      $( ".droppable .box" ).droppable({
+        activeClass: "ui-state-active",
+        drop: function( event, ui ) {
+          $("<div class='post_save'></div>").append(ui.draggable.contents().clone()).appendTo(this);
+          $('.overlay').click(function(){
+              $(this).parent().parent().remove();
+          });
+        }
+      });
+      $('.overlay').click(function(){
+        $(this).parent().parent().remove();
+      });
+      $("#lista_mercado .checkSkin").change(function() {
+        $(this).parent().find('label.checkSkin').toggleClass("selected", this.checked);
+        $(this).parent().toggleClass('select', this.checked);
+      });
+
       
 
 });
