@@ -958,6 +958,7 @@ footer .tablet_Row {
 
 .search_filter_block {margin-bottom: 30px;}
 .search_filter_block h2 {font-size: 16px; font-weight: 600; margin-bottom: 7px;}
+.search_filter_block p {margin-bottom: 7px;}
 .search_filter_block .accordion {}
 .search_filter_block .accordion h3.accordion_header {
     cursor: pointer;
@@ -1193,6 +1194,48 @@ header .welcome_msg {
 .post_colecciones .img_cont {overflow: hidden;}
 .post_colecciones .img_cont img {float: left; margin: 2px;}
 
+#page.mis_colecciones_detail .cargarmas {padding: 10px 0;}
+#page.mis_colecciones_detail .search_filter_block {margin-top: 20px;}
+#page.mis_colecciones_detail .title h1 {
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    color: #3D312A;
+    float: left;
+    font-weight: 100;
+    padding: 7px 0;
+    width: 87%;
+}
+#page.mis_colecciones_detail .counter {float: left; margin-left: 10px; margin-top: 5px;}
+#page.mis_colecciones_detail .social_module {margin-bottom: 10px; margin-right: 65px;}
+#page.mis_colecciones_detail .ver_ocasiones {
+    display: inline-block;
+    margin-top: 7px;
+}
+#page.mis_colecciones_detail .calificar {
+    margin-right: 15px;
+    margin-top: 7px;
+}
+#page.mis_colecciones_detail .calificar .valor {
+    margin-right: 15px;
+    margin-top: 4px;
+}
+#page.mis_colecciones_detail .droppable .box {
+    margin-top: 0;
+    overflow: hidden;
+    padding: 8px;
+}
+#page.mis_colecciones_detail .post,
+#page.mis_colecciones_detail .post.dropped {margin-right: 12px; margin-bottom: 20px;}
+#page.mis_colecciones_detail .post.last,
+#page.mis_colecciones_detail .post.dropped.last  {margin-right: 0;}
+#page.mis_colecciones_detail .post .description {margin: 4px 0;}
+#page.mis_colecciones_detail .box.ui-droppable.ui-state-active {padding-bottom: 110px;}
+
+#page.mis_colecciones_detail .post.dropped {}
+#page.mis_colecciones_detail .post.dropped .img_cont img {width: 160px;}
+.post.dropped  div.cmf-skinned-select {width: 158px !important;}
+
+.post_result .select_nav {display:none;}
 /* ****************************************************************************************************************
     MODALS
 **************************************************************************************************************** */

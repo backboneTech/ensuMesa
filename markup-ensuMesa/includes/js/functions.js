@@ -68,6 +68,7 @@ $(document).ready(function(){
         revert: "invalid",
         helper: "clone" 
       });
+
       $( ".droppable .box" ).droppable({
         activeClass: "ui-state-active",
         drop: function( event, ui ) {
@@ -77,6 +78,37 @@ $(document).ready(function(){
           });
         }
       });
+
+      // DROPPABLE MIS COLECCIONES DETAIL
+      function draggableReset() {
+        $("#page.mis_colecciones_detail .post").removeClass('last');
+        $('#page.mis_colecciones_detail .post:nth-child(3n)').addClass('last');
+        $('#page.mis_colecciones_detail .post').css('clear','');
+        $('#page.mis_colecciones_detail .post:nth-child(3n+1)').css('clear','left');
+      }
+
+      $( "#page.mis_colecciones_detail .droppable .box" ).droppable({
+        activeClass: "ui-state-active",
+        drop: function( event, ui ) {
+          $("<div class='post dropped three columns alpha omega'></div>").append(ui.draggable.contents().clone()).appendTo(this);
+          $('.overlay').click(function(){
+              $(this).parent().parent().remove();
+          });
+          $("select").select_unskin();
+          $("select").select_skin();
+
+          draggableReset();
+
+          $(".box.ui-droppable .post.dropped select").change(function() {
+            if($(this).val() == "Eliminar"){
+              $(this).parent().parent().parent().remove();
+            };
+            
+            draggableReset();
+          });
+        }
+      });
+
       $('.overlay').click(function(){
         $(this).parent().parent().remove();
       });
@@ -88,11 +120,18 @@ $(document).ready(function(){
       // MIS COLECCIONES
       $('.colecciones_box .post_colecciones:nth-child(3n)').addClass('last');
       $('.colecciones_box .post_colecciones:nth-child(3n)').after('<div class="line_break_dotted"></div>');
-
-
+      $('#page.mis_colecciones_detail .post:nth-child(3n)').addClass('last');
+      // ELIMINAR POST MIS COLECCIONES
+      $(".box.ui-droppable .post select, .box.ui-droppable .post_dropped select").change(function() {
+        if($(this).val() == "Eliminar"){
+          $(this).parent().parent().parent().remove();
+        };
+        draggableReset();
+      });
       
-
 });
+
+
 $(window).load(function(){ 
     // executes when complete page is fully loaded, including all frames, objects and images
 });
