@@ -87,6 +87,7 @@ $(document).ready(function(){
 
       // MIS COLECCIONES
       $('.colecciones_box .post_colecciones:nth-child(3n)').addClass('last');
+      $('.colecciones_box .post_colecciones:nth-child(3n)').after('<div class="line_break_dotted"></div>');
 
 
       

@@ -78,6 +78,7 @@ input[placeholder] {color: #999999;}
 .img_thumbSmall {width: 64px;}
 .page_content {margin-bottom: 20px;}
 .line_break {border-bottom: 1px solid #CCCCCC; height: 5px; margin: 7px 0;}
+.line_break_dotted {border-bottom: 1px dotted #CCCCCC; height: 5px; margin: 7px 0; clear:both;}
 /* ****************************************************************************************************************
     estilos con posibles cambios de temas (colores)
 **************************************************************************************************************** */
