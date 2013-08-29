@@ -1,7 +1,7 @@
 /*jquery.select_skin.js */
 /*
  * jQuery select element skinning
- * version: 1.0.6 (26/06/2010)
+ * version: 1.0.7 (11/07/2012)
  * @requires: jQuery v1.2 or later
  * adapted from Derek Harvey code
  *   http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm
@@ -20,20 +20,20 @@
             s = $(this);
             if (!s.attr('multiple')) {
                 // create the container
-                s.wrap('<div class="skin-select-cont"><div class="skin-select-left-border"><div class="cmf-skinned-select"></div></div></div>');
+                s.wrap('<div class="cmf-skinned-select"></div>');
                 c = s.parent();
                 c.children().before('<div class="cmf-skinned-text">&nbsp;</div>').each(function() {
                     if (this.selectedIndex >= 0) $(this).prev().text(this.options[this.selectedIndex].innerHTML)
                 });
-                c.width(s.outerWidth()-0);
-                c.height(s.outerHeight()-0);
+                c.width(s.outerWidth()-2);
+                c.height(s.outerHeight()-2);
 
                 // skin the container
-                //c.css('background-color', s.css('background-color'));
-                //c.css('color', s.css('color'));
-                //c.css('font-size', s.css('font-size'));
-                //c.css('font-family', s.css('font-family'));
-                //c.css('font-style', s.css('font-style'));
+                c.css('background-color', s.css('background-color'));
+                c.css('color', s.css('color'));
+                c.css('font-size', s.css('font-size'));
+                c.css('font-family', s.css('font-family'));
+                c.css('font-style', s.css('font-style'));
                 c.css('position', 'relative');
 
                 // hide the original select
@@ -47,10 +47,10 @@
 
                 // add events
                 c.children().click(function() {
-                    t.text( (this.options.length > 0 && this.selectedIndex >= 0 ? this.options[this.selectedIndex].innerHTML : '') );
+                    t.html( (this.options.length > 0 && this.selectedIndex >= 0 ? this.options[this.selectedIndex].innerHTML : '') );
                 });
                 c.children().change(function() {
-                    t.text( (this.options.length > 0 && this.selectedIndex >= 0 ? this.options[this.selectedIndex].innerHTML : '') );
+                    t.html( (this.options.length > 0 && this.selectedIndex >= 0 ? this.options[this.selectedIndex].innerHTML : '') );
                 });
              }
         });

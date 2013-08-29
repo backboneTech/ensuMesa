@@ -17,12 +17,13 @@
         width:100%;
         overflow:hidden;
     }
-    div.cmf-skinned-select 
-    {
-        background:url('images/bg-select.png') no-repeat right 0; 
-        height: 28px; 
+    div.cmf-skinned-select {
+        background: url("images/bg-select.png") no-repeat scroll right 0 transparent;
+        border-left: 1px solid #CCCCCC;
         cursor: pointer;
-        width:100%;
+        height: 28px;
+        padding-left: 2px;
+        width: 100%;
     }
     .skin-select-left-border 
     {
@@ -54,7 +55,7 @@
         filter:alpha(opacity=0);
         position: relative;
         z-index: 100;
-        height: 28px;
+        height: 30px;
         width:100%; 
     }
     div.cmf-skinned-select select optgroup {color:#000000; font-size:95%;}
