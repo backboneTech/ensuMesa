@@ -24,7 +24,8 @@
 	.user_box{ background-color: #f5f2ee; padding: 20px; margin:20px 0 0 10px; }
 		.foto_usuario_big{ float: left; width: 75px; margin-bottom: 10px;}
 		.user_box .nombre{ float: left; width: 150px; padding: 5px 0 0 10px;}
-		.user_box .nombre span{ display: block; color: #333; border-bottom: dotted 1px #ccc; font-size: 13px; text-transform: uppercase; padding: 5px 0 }
+		.user_box .nombre span, .dottedBlock{ display: block; color: #333; border-bottom: dotted 1px #ccc; font-size: 13px; text-transform: uppercase; padding: 5px 0 }
+		.user_box .nombre .dottedBlock{ text-transform: none;}
 		.user_box .amigos{ clear: both; border-top: solid 1px #CCC;}
 		.user_box .amigos h2{ font-size: 12px; text-transform: uppercase; margin: 5px 0;}
 		.user_box .smallcount{ margin: 3px 0 0;}
@@ -52,5 +53,321 @@
 		.over_dialog_box{ position: absolute; width:150px; left: 50%; margin-left: -300px; top: -10px;  background: #fff url(../media/num1.png) no-repeat 7px 50%; padding: 10px 10px 10px 40px; text-align: left; box-shadow: 2px 0 10px 0 rgba(0,0,0,.6)}
 		.over_dialog_box img{ position: absolute; right: -6px; top:25px;}
 
+
+
+/* ****************************************************************************************************************
+    PAGE :: MI CUADERNO
+**************************************************************************************************************** */
+h2.foros_lista.text_center{ margin-bottom: .7em;}
+	.blog_list article, #colecciones_recomendadas article{ position: relative;}
+
+	#colecciones_recomendadas article.clearfix{ display: block;}
+
+	.flag_mark { position: absolute; top: 0; left: -60px; text-align: center; height: 40px; padding-right: 13px; line-height:33px; }
+	.flag_mark.blog{background: url("../media/bg-counter.jpg") no-repeat scroll left top;  width: 37px;}
+	.flag_mark.blog img{ vertical-align: middle;}
+	.texto-fuera{ width: 60px; position: absolute; top: 40px; left: 50%; margin-left: -30px; font-size: 11px; line-height: 105%;}
+	.flag_content{ position: relative;}
+	.blog_list .line_break{ margin: 15px 0; height: 2px; border-top: solid 1px #CCC; border-width: 1px 0 0;}
+	.blog_list img.columns{ display: block;}
+	.blog_list h3{ font-size: 14px; margin-bottom: .66em;}
+	.blog_list .chef{ margin-bottom: .66em;}
+
+#colecciones_recomendadas{ margin-top: 25px;}
+	#colecciones_recomendadas article{ margin: 20px 0;}
+	.sextaparte.columns{ width: 17%; margin:0 3% 0 0; }
+	div.sextaparte.columns{ width: 20%; margin: 0;}
+	.esquina_inferior{ position: absolute; bottom: 0; right: 0; width: 17%; text-align: right; }
+	.esquina_inferior a{ clear: both;}
+	#colecciones_recomendadas .calificar{ display: inline-block; width: 60px;}
+	#colecciones_recomendadas .calificar .valor{ height:12px; width: 60px;margin-top: 2px; background: url(../media/star-vacia.png) repeat-x top left; position: relative; }
+   #colecciones_recomendadas .calificar .calificacion{height:12px; background: url(../media/star-full.png) repeat-x top left; }
+   #colecciones_recomendadas h3{ font-size: 14px;}
+   .line_break.extramargin{ margin: 20px 0;}
+   .foto_usuario_smll{ float: left; width: 40px;}
+   .user_box h2{ font-family: 'merriweather';  font-size: 24px;}
+   .user_box h2 span{ font-size: 11px; display: block; line-height: 110%;font-weight: 700;}
+   .user_box .full.nombre{ float: none; width: 100%; margin: 0; padding: 0;}
+   .user_box .nombre a{ text-transform: none;}
+   .user_box #combobox{ font-size: 11px; }
+   .user_box .skin-select-cont{width: 40%; float: right; margin-top: -5px;}
+   .dottedBlock.conInput{ padding: 8px 0;}
+   .dottedBlock.conInput .inputholder{ float: right; width: 45%; margin-top: -5px; text-align: right;}
+   .dottedBlock.conInput .inputholder input{ width: 78%;}
+
+   .user_box a.btn, .user_box input.btn{ padding: 5px 0 !important; width: 122px; text-align: center; height: auto; margin: 10px 0; font-size: 12px;}
+
+/*DatePicker*/
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border: 1px solid #cdc3b7;
+	background: #ede4d4 url(images/ui-bg_glass_70_ede4d4_1x400.png) 50% 50% repeat-x;
+	font-weight: normal;
+	color: #3f3731;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+	color: #3f3731;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #f5ad66;
+	background: #f5f0e5 url(images/ui-bg_glass_100_f5f0e5_1x400.png) 50% 50% repeat-x;
+	font-weight: normal;
+	color: #a46313;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited {
+	color: #a46313;
+	text-decoration: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+	border: 1px solid #e0cfc2;
+	background: #f4f0ec url(images/ui-bg_highlight-hard_100_f4f0ec_1x100.png) 50% 50% repeat-x;
+	font-weight: normal;
+	color: #b85700;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #b85700;
+	text-decoration: none;
+}
+
+
+.ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	width: 16px; 
+	height: 16px;
+}
+.ui-icon,
+.ui-widget-content .ui-icon {
+	background-image: url(js/jquery_ui/css/humanity/images/ui-icons_c47a23_256x240.png);
+}
+.ui-widget-header .ui-icon {
+	background-image: url(js/jquery_ui/css/humanity/images/ui-icons_ffffff_256x240.png);
+}
+.ui-state-default .ui-icon {
+	background-image: url(js/jquery_ui/css/humanity/images/ui-icons_f08000_256x240.png);
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon {
+	background-image: url(js/jquery_ui/css/humanity/images/ui-icons_f08000_256x240.png);
+}
+.ui-state-active .ui-icon {
+	background-image: url(js/jquery_ui/css/humanity/images/ui-icons_f35f07_256x240.png);
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #f5ad66;
+	background: #f5f0e5 url(js/jquery_ui/css/humanity/images/ui-bg_glass_100_f5f0e5_1x400.png) 50% 50% repeat-x;
+	font-weight: normal;
+	color: #a46313;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited {
+	color: #a46313;
+	text-decoration: none;
+}
+
+.ui-widget {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 1.1em;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 1em;
+}
+.ui-widget-content {
+	border: 1px solid #e0cfc2;
+	background: #f4f0ec url(js/jquery_ui/css/humanity/images/ui-bg_inset-soft_100_f4f0ec_1x100.png) 50% bottom repeat-x;
+	color: #1e1b1d;
+}
+.ui-widget-content a {
+	color: #1e1b1d;
+}
+.ui-widget-header {
+	border: 1px solid #d49768;
+	background: #cb842e url(js/jquery_ui/css/humanity/images/ui-bg_glass_25_cb842e_1x400.png) 50% 50% repeat-x;
+	color: #ffffff;
+	font-weight: bold;
+}
+.ui-widget-header a {
+	color: #ffffff;
+}
+
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month-year {
+	width: 100%;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 49%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+
+
+
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+.ui-datepicker .ui-datepicker-title select.ui-datepicker-month, 
+.ui-datepicker .ui-datepicker-title select.ui-datepicker-year{ font-size: 11px; font-weight: normal;}
+
+
+/* with multiple calendars */
 
 

@@ -48,6 +48,11 @@ $(document).ready(function(){
       $('.results_content .post.three.columns:nth-child(3n)').addClass('last');
       
 
+      $( ".selectDate" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+      });
+
 });
 $(window).load(function(){ 
     // executes when complete page is fully loaded, including all frames, objects and images
