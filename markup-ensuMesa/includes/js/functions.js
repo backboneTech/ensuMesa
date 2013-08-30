@@ -48,6 +48,7 @@ $(document).ready(function(){
       $('.results_content .post.three.columns:nth-child(3n)').addClass('last');
 
 
+
       //ACCORDION
       $('.accordion .accordion_header').click(function(){
         if($(this).hasClass('show'))
@@ -128,8 +129,14 @@ $(document).ready(function(){
         };
         draggableReset();
       });
+
+      $( ".selectDate" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+      });
       
 });
+
 
 
 $(window).load(function(){ 
