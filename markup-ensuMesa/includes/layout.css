@@ -1099,7 +1099,6 @@ header .welcome_msg {
 .droppable .post_save .info {margin-left: 95px;}
 .droppable .post_save .info h3 {margin-bottom: 5px;}
 
-
 /* LISTA DE MERCADO*/
 #lista_mercado {
     margin: 15px 8px 8px;
@@ -1573,5 +1572,4 @@ pre {
     #page.menu_ocasion .ten.columns,
     #page.menu_ocasion .six.columns {display: none;}
 }
-
 

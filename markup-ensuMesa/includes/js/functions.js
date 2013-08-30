@@ -129,15 +129,13 @@ $(document).ready(function(){
         };
         draggableReset();
       });
-      
-
-      
 
       $( ".selectDate" ).datepicker({
         changeMonth: true,
         changeYear: true
       });
-
+      
+});
 
 
 
